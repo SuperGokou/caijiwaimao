@@ -66,15 +66,16 @@
       <a class="toc-item" href="#s5"><span class="toc-item-num">05</span>三类同行参照（苏杭 / 龙虾 Hermes / 海外）</a>
       <a class="toc-item" href="#s6"><span class="toc-item-num">06</span>产品定位：增长引擎，不是工具</a>
       <a class="toc-item" href="#s7"><span class="toc-item-num">07</span>产品架构：6 个 AI Agent 编队</a>
-      <a class="toc-item" href="#s8"><span class="toc-item-num">08</span>从手动到 AI 的全流程映射</a>
-      <a class="toc-item" href="#s9"><span class="toc-item-num">09</span>五大杀手锏</a>
-      <a class="toc-item" href="#s10"><span class="toc-item-num">10</span>21 天冲刺行动计划</a>
-      <a class="toc-item" href="#s11"><span class="toc-item-num">11</span>技术栈与基础设施</a>
-      <a class="toc-item" href="#s12"><span class="toc-item-num">12</span>商业模式（自用 → 产品化）</a>
-      <a class="toc-item" href="#s13"><span class="toc-item-num">13</span>12 个月路线图</a>
-      <a class="toc-item" href="#s14"><span class="toc-item-num">14</span>团队分工与职责</a>
-      <a class="toc-item" href="#s15"><span class="toc-item-num">15</span>度量、复盘与决策机制</a>
-      <a class="toc-item" href="#s16"><span class="toc-item-num">16</span>FAQ / 关键决策记录</a>
+      <a class="toc-item" href="#s8"><span class="toc-item-num">08</span>产品业务流程（人话版 · 必读）</a>
+      <a class="toc-item" href="#s9"><span class="toc-item-num">09</span>从手动到 AI 的全流程映射</a>
+      <a class="toc-item" href="#s10"><span class="toc-item-num">10</span>五大杀手锏</a>
+      <a class="toc-item" href="#s11"><span class="toc-item-num">11</span>21 天冲刺行动计划</a>
+      <a class="toc-item" href="#s12"><span class="toc-item-num">12</span>技术栈与基础设施</a>
+      <a class="toc-item" href="#s13"><span class="toc-item-num">13</span>商业模式（自用 → 产品化）</a>
+      <a class="toc-item" href="#s14"><span class="toc-item-num">14</span>12 个月路线图</a>
+      <a class="toc-item" href="#s15"><span class="toc-item-num">15</span>团队分工与职责</a>
+      <a class="toc-item" href="#s16"><span class="toc-item-num">16</span>度量、复盘与决策机制</a>
+      <a class="toc-item" href="#s17"><span class="toc-item-num">17</span>FAQ / 关键决策记录</a>
     </div>
   </div>
 </nav>
@@ -744,7 +745,17 @@
       <div class="section-tag">07 — Product Architecture</div>
       <h2>产品架构<br />6 个 AI Agent 协同编队</h2>
       <p class="lead">
-        这不是一个 App。这是一支<strong>会自我调度、自我学习、自我进化</strong>的 AI 销售团队。每个 Agent 是一个独立角色，背后是 LLM + 工具集 + 记忆库。
+        这不是一个 App。这是一支<strong>会自我调度、自我学习、自我进化</strong>的 AI 销售团队。每个 Agent 是一个独立角色，背后由人工智能模型 + 工具集 + 记忆库支撑。
+      </p>
+    </div>
+
+    <div class="callout" style="background: var(--amber-soft); color: var(--ink); border: 1px solid var(--amber); margin-bottom: 40px;">
+      <span class="callout-tag" style="color: var(--amber);">— 阅读提示 —</span>
+      <h4 style="color: var(--ink);">这一节有一些技术细节 · 不懂技术的同事可以跳到 <a href="#s8" style="color: var(--amber); text-decoration: underline;">第 08 节"产品业务流程"</a></h4>
+      <p style="color: var(--ink-2);">
+        <strong>这一节</strong>讲"系统架构 / 各角色具体怎么实现的"，给开发同事看。<br>
+        <strong>第 08 节</strong>用大白话讲"客户使用这套系统每天会经历什么" — 适合所有人。<br>
+        建议非技术同事：直接跳到 08 节读完，再回来扫一眼这一节的 Agent 卡片就够了。
       </p>
     </div>
 
@@ -1098,11 +1109,317 @@
   </div>
 </section>
 
-<!-- ======================== 08 映射 ======================== -->
-<section id="s8" style="background: var(--paper);">
+<!-- ======================== 08 业务流程（人话版） ======================== -->
+<section id="s8">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">08 — Mapping</div>
+      <div class="section-tag">08 — How It Works</div>
+      <h2>产品业务流程<br />一个客户从陌生到成交的全过程</h2>
+      <p class="lead">
+        前面几节讲了"我们做什么"和"用什么 AI Agent"，这一节讲<strong>"怎么用"</strong> —
+        不懂技术也能看懂，就用一个真实场景，把这套系统每天怎么帮你工作讲清楚。
+      </p>
+    </div>
+
+    <div class="callout" style="background: var(--amber-soft); color: var(--ink); border: 1px solid var(--amber); margin-bottom: 48px;">
+      <span class="callout-tag" style="color: var(--amber);">— 阅读这一节最重要的一件事 —</span>
+      <h4 style="color: var(--ink);">这套系统不是让你"学一个新软件"，而是让你"多一个不睡觉的销售助理"</h4>
+      <p style="color: var(--ink-2);">
+        你<strong>该做的事</strong>：决定打哪批客户、关键时刻拍板（报价、谈判）。<br>
+        AI <strong>该做的事</strong>：找客户、做调研、写信、发送、跟进、回复 — <strong>所有重复劳动</strong>。<br>
+        你的角色从"信封粘贴工"升级为"销售指挥官"。
+      </p>
+    </div>
+
+    <h3>第 0 步：首次配置（一次性 · 10-15 分钟）</h3>
+    <p class="body" style="color: var(--muted);">
+      在系统开始帮你打客户<strong>之前</strong>，先得告诉它"<strong>你是谁、你卖什么</strong>"。这一步只做一次，之后所有 campaign 都共享这份"产品大脑"。
+    </p>
+
+    <div class="grid-2" style="margin-top: 24px;">
+      <div class="card">
+        <div class="card-num">— 你需要提供 4 件事</div>
+        <h4>产品 + 公司基本盘</h4>
+        <ul style="font-size: 14px; line-height: 1.7;">
+          <li><strong>① 产品资料</strong> — 规格表 / 价格区间 / MOQ / 交期 / 认证（CE / UL / IEC 等）</li>
+          <li><strong>② 客户案例</strong> — 已成交的代表性客户（哪些公司用过、规模、效果）</li>
+          <li><strong>③ 差异化卖点</strong> — 和竞品比的优势（如"交期短 30 天"、"本地售后"、"5 年保修"）</li>
+          <li><strong>④ 公司基本盘</strong> — 官网、公司简介、规模、年限、团队</li>
+        </ul>
+      </div>
+      <div class="card" style="background: var(--bg);">
+        <div class="card-num">— 为什么这一步重要</div>
+        <h4>AI 写信永远基于"你的事实"</h4>
+        <ul style="font-size: 14px; line-height: 1.7;">
+          <li>AI 写每一封开发信时<strong>不会瞎编参数</strong>，所有数据都从这份资料里抓</li>
+          <li>之后每次新打 campaign，AI 会<strong>自动嵌入</strong>产品资料和案例，不需要你重复告诉它</li>
+          <li>这份"产品大脑"会<strong>越用越完善</strong> — 新案例、新认证、新报价都可以随时补充</li>
+          <li>万一业务员离职，这些<strong>知识资产留在系统里</strong>，不会随人流失</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout" style="background: var(--paper); color: var(--ink); border: 1px solid var(--border); margin-top: 24px;">
+      <span class="callout-tag" style="color: var(--amber);">— 给非技术同事的类比 —</span>
+      <h4 style="color: var(--ink);">就像招进一个新销售，你要先给他做产品培训</h4>
+      <p style="color: var(--ink-2);">
+        AI 也一样。第 0 步就是给 AI"做产品培训" — 把产品手册、价格表、客户案例、公司差异化讲清楚一次。<br>
+        之后每次打 campaign，AI 已经"上岗了"，你只需要告诉它"这次打哪批客户"，它自己会把培训过的产品知识用上。
+      </p>
+    </div>
+
+    <h3 style="margin-top: 80px;">配置完了之后 · 7 步循环工作流</h3>
+    <p class="body" style="color: var(--muted);">
+      第 0 步只做一次。下面这 7 步是<strong>每次打一批客户都会循环跑一遍</strong>的标准流程。
+      假设今天我们要打"巴基斯坦商业储能"市场，目标客户是当地的安装商和分销商 — 下面是从输入指令到约到第一次见面，整个流程的真实演绎：
+    </p>
+
+    <div class="timeline" style="margin-top: 40px;">
+
+      <div class="tl-item">
+        <div class="tl-week">第 1 步 · 你做的事（5 分钟）</div>
+        <div class="tl-title">告诉系统要打谁</div>
+        <div class="tl-detail">
+          <strong>你</strong>：在系统里填一句话："要联系巴基斯坦做商业储能（10kWh-1MWh）的安装商和分销商，我们的卖点是交期短、价格好"。<br>
+          <strong>系统</strong>：理解了。开始干活。
+          <p style="margin-top: 12px; padding: 10px 14px; background: var(--bg); border-left: 3px solid var(--amber); font-size: 13px;">
+            💡 不需要你提供客户名单。不需要你写邮件模板。这一步只要你<strong>说清楚"打谁"</strong>就够了。
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">第 2 步 · AI 自动做（10 分钟）</div>
+        <div class="tl-title">AI 帮你"全网找客户"</div>
+        <div class="tl-detail">
+          就像派出一个 24/7 不睡觉的实习生在全网找客户 — 但效率比 100 个实习生加起来还快。<br>
+          AI 会从行业数据库、LinkedIn、海外新闻、行业展会名录、招标公告里<strong>自动筛出 50-100 家匹配的公司</strong>，并按匹配度打分排序。
+          <p style="margin-top: 12px; padding: 10px 14px; background: var(--bg); border-left: 3px solid var(--amber); font-size: 13px;">
+            💡 重点不是"找得多"，是"找得准"。AI 会优先排出"刚拿到融资 / 刚发布招标 / 正在招新销售"这种<strong>有买入信号</strong>的公司 — 这种客户回复率最高。
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">第 3 步 · AI 自动做（30 分钟）</div>
+        <div class="tl-title">为每家公司建一份"作战档案"</div>
+        <div class="tl-detail">
+          每家公司一份<strong>独立档案</strong>，包含 6 个关键信息：
+          <ul style="margin-top: 12px;">
+            <li><strong>这家公司是谁</strong> — 多少人、多少钱、做什么、卖给谁</li>
+            <li><strong>谁是决策人</strong> — CEO、采购总监、技术总监的名字 / 邮箱 / LinkedIn</li>
+            <li><strong>他们最近在干什么</strong> — 拿了项目？融了资？换了供应商？</li>
+            <li><strong>他们的痛点</strong> — 当前供应商有什么问题？我们能帮他们解决什么？</li>
+            <li><strong>沟通偏好</strong> — 喜欢长邮件还是短消息？什么时间回邮件？</li>
+            <li><strong>意向分</strong> — AI 给的"值得投入精力的程度"打分（1-100）</li>
+          </ul>
+          <p style="margin-top: 12px; padding: 10px 14px; background: var(--bg); border-left: 3px solid var(--amber); font-size: 13px;">
+            💡 不是 Excel 表格 — 是像内部销售总监给业务员准备的"作战 brief"。<strong>你打开就知道这家客户该怎么聊。</strong>
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">第 4 步 · AI 自动做（5 分钟）</div>
+        <div class="tl-title">AI 给每家公司写定制开发信</div>
+        <div class="tl-detail">
+          关键差异：<strong>不是模板，是定制</strong>。每封信都引用客户独有的事实，让客户读起来感觉"是认真研究过我们才写的"。
+          <p style="margin-top: 16px;">举个具体例子，对比一下：</p>
+          <table class="vs-table" style="margin-top: 8px;">
+            <thead>
+              <tr>
+                <th style="color: var(--rose) !important; width: 50%;">❌ 传统模板群发（回复率 1%）</th>
+                <th style="color: var(--teal) !important; width: 50%;">✅ AI 定制开发信（回复率 5-15%）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="col-them" style="font-style: italic; line-height: 1.6;">
+                  Dear Sir/Madam,<br><br>
+                  We are a leading manufacturer of energy storage systems in China. We offer competitive prices and reliable quality. Looking forward to your reply.<br><br>
+                  Best regards
+                </td>
+                <td class="col-us" style="font-style: italic; line-height: 1.6;">
+                  Hi Ali,<br><br>
+                  看到 Solar Edge 上月在 Karachi 中标的 12MWh 项目恭喜 — 我注意到你们目前用的是 BYD 的方案。<br><br>
+                  我们同等容量的 LFP 储能系统<strong>交期能短 30 天 + 提供巴基斯坦本地售后</strong>，正好能解决你们之前 LinkedIn 上提到的"交付周期太长"的痛点。<br><br>
+                  附上 Karachi 项目的参考方案 PDF，方便你给团队过目。下周想找你聊 15 分钟，时间你定？<br><br>
+                  Wei
+                </td>
+              </tr>
+            </tbody>
+          </table>
+          <p style="margin-top: 12px; padding: 10px 14px; background: var(--bg); border-left: 3px solid var(--amber); font-size: 13px;">
+            💡 关键不是"AI 多聪明"，是 AI 把<strong>第 3 步建好的档案</strong>用进了信里 — 客户名字、客户上月的项目、客户用过的供应商、客户的痛点 — 都是真事。
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">第 5 步 · 你做的事（30 秒/封）</div>
+        <div class="tl-title">扫一眼，点"发送"</div>
+        <div class="tl-detail">
+          AI 写完每封信会推给你审批。你的工作很简单：
+          <ul style="margin-top: 12px;">
+            <li>👍 觉得能发 → 点"发送"</li>
+            <li>✏️ 想改一下 → 直接编辑后发送（AI 会学习你的修改风格）</li>
+            <li>❌ 这家客户不想要 → 点"弃用"，AI 不再处理</li>
+          </ul>
+          <p style="margin-top: 12px; padding: 10px 14px; background: var(--bg); border-left: 3px solid var(--amber); font-size: 13px;">
+            💡 这一步是<strong>"人始终在控制"的关键</strong>。AI 不擅自发邮件，不擅自联系客户。每一封信都有你的最终拍板。
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">第 6 步 · AI 自动做（持续 14 天）</div>
+        <div class="tl-title">AI 自动跟进 + 切换渠道</div>
+        <div class="tl-detail">
+          客户没回首封信？AI 不会让线索"凉掉"。它会自动按节奏继续触达：
+          <ul style="margin-top: 12px;">
+            <li><strong>第 0 天</strong>：发出首封开发信</li>
+            <li><strong>第 5 天</strong>：客户没回 → AI 自动发跟进信（不同角度切入，不是简单 "Just following up"）</li>
+            <li><strong>第 10 天</strong>：还没回 → AI 切到 LinkedIn，发申请加好友 + 一句话私信</li>
+            <li><strong>第 14 天</strong>：还没回 → AI 把这个客户标为"低优先级"，转入培育队列</li>
+          </ul>
+          <p style="margin-top: 12px; padding: 10px 14px; background: var(--bg); border-left: 3px solid var(--amber); font-size: 13px;">
+            💡 全程<strong>不需要你管</strong>。你只在客户回复后才需要出现。
+          </p>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">第 7 步 · AI + 你（即时响应）</div>
+        <div class="tl-title">客户回复后，AI 立刻起草回复</div>
+        <div class="tl-detail">
+          客户凌晨 3 点（巴基斯坦时差）回了一封询价。<br>
+          <strong>传统做法</strong>：你第二天起床看到，热度已经凉了。<br>
+          <strong>我们的做法</strong>：AI 立刻分析意图（询价 / 索资料 / 谈认证 / 婉拒）+ 起草回复 + 推送给你审批。等你 8 点起床，回复已经准备好。
+
+          <p style="margin-top: 16px;">具体场景：</p>
+          <ul style="margin-top: 8px;">
+            <li>客户问<strong>"MOQ 是多少？交期多久？"</strong> → AI 直接答（这是常规问题，AI 自己能搞定）</li>
+            <li>客户问<strong>"500 套的报价能给多少？"</strong> → AI <strong>自动转给你</strong>（涉及报价，必须人审）</li>
+            <li>客户说<strong>"想下周开个 Zoom 会议"</strong> → AI 自动接 Calendly，<strong>时差自动算好</strong>，给客户 3 个时段选</li>
+            <li>客户<strong>30 天没动静</strong> → AI 自动进入培育队列（每月 1 次轻触达），不让你浪费精力</li>
+          </ul>
+          <p style="margin-top: 12px; padding: 10px 14px; background: var(--bg); border-left: 3px solid var(--amber); font-size: 13px;">
+            💡 你 30 秒决定"用这版回复" or "稍微改一下"，回复就发出去了 — 客户完全感觉不到你睡过觉。
+          </p>
+        </div>
+      </div>
+
+    </div>
+
+    <h3 style="margin-top: 64px;">你和 AI 的分工 · 一张表说清楚</h3>
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th style="width: 30%;">事项</th>
+          <th style="color: var(--ink) !important;">你做</th>
+          <th style="color: var(--amber) !important;">AI 做</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-key">决定打哪批客户（ICP）</td>
+          <td class="col-us">✓</td>
+          <td class="col-them">—</td>
+        </tr>
+        <tr>
+          <td class="col-key">在 LinkedIn / Google / 展会名录上找客户</td>
+          <td class="col-them">—</td>
+          <td class="col-us" style="color: var(--amber); font-weight: 600;">✓</td>
+        </tr>
+        <tr>
+          <td class="col-key">研究客户公司、找决策人邮箱</td>
+          <td class="col-them">—</td>
+          <td class="col-us" style="color: var(--amber); font-weight: 600;">✓</td>
+        </tr>
+        <tr>
+          <td class="col-key">写定制化开发信</td>
+          <td class="col-them">—</td>
+          <td class="col-us" style="color: var(--amber); font-weight: 600;">✓</td>
+        </tr>
+        <tr>
+          <td class="col-key">审批每一封信发不发</td>
+          <td class="col-us">✓</td>
+          <td class="col-them">—</td>
+        </tr>
+        <tr>
+          <td class="col-key">实际发送 + 自动跟进 + 切换渠道</td>
+          <td class="col-them">—</td>
+          <td class="col-us" style="color: var(--amber); font-weight: 600;">✓</td>
+        </tr>
+        <tr>
+          <td class="col-key">回答客户的"MOQ / 交期 / 认证"等常规问题</td>
+          <td class="col-them">—</td>
+          <td class="col-us" style="color: var(--amber); font-weight: 600;">✓</td>
+        </tr>
+        <tr>
+          <td class="col-key">报价、谈判、签合同</td>
+          <td class="col-us">✓</td>
+          <td class="col-them">—（AI 起草，你拍板）</td>
+        </tr>
+        <tr>
+          <td class="col-key">维系老客户、复购跟进</td>
+          <td class="col-us">✓</td>
+          <td class="col-them">—（AI 提醒你"该联系谁了"）</td>
+        </tr>
+        <tr>
+          <td class="col-key">总结复盘、调整策略</td>
+          <td class="col-us">✓</td>
+          <td class="col-them">—（AI 给数据，你做判断）</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 style="margin-top: 64px;">数字对比 · 一个业务员能干多少活</h3>
+
+    <div class="grid-3">
+      <div class="card" style="background: var(--bg); border-color: var(--rose);">
+        <div class="card-num" style="color: var(--rose);">— 传统人工</div>
+        <h4 style="margin-top:0;">一周覆盖 50-100 客户</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          一个业务员一天 8-10 小时全部塞满，回复率 1%。<br>
+          一周能进入"真实对话"的客户 ≤ 3 个，能成交的每月 ≤ 1 个。
+        </p>
+      </div>
+      <div class="card" style="background: var(--bg); border-color: var(--amber-soft);">
+        <div class="card-num" style="color: var(--amber);">— 用了"工具型"AI（龙虾 / Hermes）</div>
+        <h4 style="margin-top:0;">一周覆盖 200-500 客户</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          速度快了，但还是要业务员自己写 Prompt、审核每一步、看数据。<br>
+          回复率 1-2%（仍然是模板感太重）。
+        </p>
+      </div>
+      <div class="card" style="background: var(--ink); color: white; border-color: var(--ink);">
+        <div class="card-num" style="color: var(--amber);">— 用我们（AI 增长引擎）</div>
+        <h4 style="margin-top:0; color: white;">一周覆盖 500-1000 客户</h4>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.65;">
+          业务员只在<strong style="color: white;">"决定"</strong>和<strong style="color: white;">"关键节点"</strong>出现，其他全自动。<br>
+          回复率 5-15%（深度个性化），<strong style="color: var(--amber);">每周约到 3-10 个真实会议</strong>。
+        </p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 48px;">
+      <span class="callout-tag">— 一句话总结这一节 —</span>
+      <h4>你只做"决定"，AI 做"动手"</h4>
+      <p>
+        业务员从"信封粘贴工"升级为"销售指挥官"。
+        从"一天发 50 封模板群发邮件"升级为"一天审批 50 封定制开发信 + 处理 5 个真实回复"。
+        <strong style="color: white;">同样的 8 小时，产出 10 倍。</strong>这就是我们卖给客户的核心价值。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 09 映射 ======================== -->
+<section id="s9" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">09 — Mapping</div>
       <h2>从手动到 AI<br />全流程映射对照</h2>
       <p class="lead">
         把第 03 节列的 8 步手动流程，逐一映射到 6 个 Agent。这张表是"我们到底在替代什么"的最直白回答。
@@ -1192,10 +1509,10 @@
 </section>
 
 <!-- ======================== 09 杀手锏 ======================== -->
-<section id="s9">
+<section id="s10">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">09 — Differentiation</div>
+      <div class="section-tag">10 — Differentiation</div>
       <h2>五大杀手锏<br />比苏杭 / 11x / Clay 更前沿</h2>
       <p class="lead">
         市面上已有 11x.ai、Clay.com、Smartlead 等"AI BDR"工具，他们做得不差。但我们有 5 个他们没做或没法做的事 — 这些是我们的护城河起点。
@@ -1280,10 +1597,10 @@
 </section>
 
 <!-- ======================== 10 MVP ======================== -->
-<section id="s10" style="background: var(--paper);">
+<section id="s11" style="background: var(--paper);">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">10 — 21 Day Sprint</div>
+      <div class="section-tag">11 — 21 Day Sprint</div>
       <h2>21 天冲刺<br />跑通最小"成交闭环"</h2>
       <p class="lead">
         我们没有 12 周。产品落地窗口只有 <strong>3 个礼拜</strong>。这意味着所有"锦上添花"全砍，只保留一条命脉：
@@ -1401,10 +1718,10 @@
 </section>
 
 <!-- ======================== 11 技术栈 ======================== -->
-<section id="s11">
+<section id="s12">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">11 — Tech Stack</div>
+      <div class="section-tag">12 — Tech Stack</div>
       <h2>技术栈<br />前沿配前沿，但不为前沿而前沿</h2>
       <p class="lead">
         每一个选型背后都有一个理由。能用现成 API 不自建，能用托管服务不运维，能用最强 LLM 写信就不省。
@@ -1507,10 +1824,10 @@
 </section>
 
 <!-- ======================== 12 商业模式 ======================== -->
-<section id="s12" style="background: var(--paper);">
+<section id="s13" style="background: var(--paper);">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">12 — Business Model</div>
+      <div class="section-tag">13 — Business Model</div>
       <h2>商业模式<br />自用 → 内测 → 产品化的三段式</h2>
       <p class="lead">
         因为是自己投的项目，节奏可以慢。先把"产品 + 数据 + 案例"跑实，再考虑卖给谁、怎么卖。
@@ -1607,10 +1924,10 @@
 </section>
 
 <!-- ======================== 13 路线图 ======================== -->
-<section id="s13">
+<section id="s14">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">13 — 12 Month Roadmap</div>
+      <div class="section-tag">14 — 12 Month Roadmap</div>
       <h2>12 个月路线图<br />从 MVP 到品类引领者</h2>
       <p class="lead">
         每 3 个月一个明确的"形态升级"。每一阶段都有"可对外讲的成果"和"内部下一步钩子"。
@@ -1697,10 +2014,10 @@
 </section>
 
 <!-- ======================== 14 团队 ======================== -->
-<section id="s14" style="background: var(--paper);">
+<section id="s15" style="background: var(--paper);">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">14 — Roles & Responsibilities</div>
+      <div class="section-tag">15 — Roles & Responsibilities</div>
       <h2>团队分工<br />谁负责什么 · 怎么交接</h2>
       <p class="lead">
         早期不需要十几个人。MVP 阶段最理想 3-5 个人核心组合，每个人一专多能。下面列出的是<strong>角色</strong>，不是工位 — 一个人可以兼多个。
@@ -1786,10 +2103,10 @@
 </section>
 
 <!-- ======================== 15 度量 ======================== -->
-<section id="s15">
+<section id="s16">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">15 — Measurement</div>
+      <div class="section-tag">16 — Measurement</div>
       <h2>度量、复盘<br />与决策机制</h2>
       <p class="lead">
         没有数据不开会。所有决策必须基于数据，没数据就先去拿数据。下面是我们要持续盯着的指标和复盘流程。
@@ -1888,10 +2205,10 @@
 </section>
 
 <!-- ======================== 16 FAQ ======================== -->
-<section id="s16" style="background: var(--paper);">
+<section id="s17" style="background: var(--paper);">
   <div class="wrap">
     <div class="section-head">
-      <div class="section-tag">16 — FAQ</div>
+      <div class="section-tag">17 — FAQ</div>
       <h2>预想问题<br />和我们的真实回答</h2>
       <p class="lead">
         团队、朋友、第一批客户最可能问的问题。先在内部对齐答案，遇到时不慌。
