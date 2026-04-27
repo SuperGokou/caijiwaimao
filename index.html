@@ -1,0 +1,2033 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 外贸增长引擎 · 内部作战图</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style/main.css" />
+</head>
+<body>
+
+<!-- ======================== HERO · 简约版 ======================== -->
+<header class="hero hero-minimal">
+  <div class="wrap">
+    <h1>不做工具<br />我们在做的是 <em>AI 外贸增长引擎</em></h1>
+  </div>
+</header>
+
+<!-- ======================== STATS BAND ======================== -->
+<section class="stats-band">
+  <div class="wrap">
+    <div class="stats-meta">
+      <span>Internal · Confidential</span>
+      <span>v1.0 · 2026.04</span>
+      <span>面向：核心团队</span>
+    </div>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="hero-stat-num">8<small>步</small></div>
+        <div class="hero-stat-label">当前手动外贸开发流程的环节数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">&lt;1<small>%</small></div>
+        <div class="hero-stat-label">行业群发开发信平均回复率</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">6<small>个</small></div>
+        <div class="hero-stat-label">协同工作的 AI Agent 角色数</div>
+      </div>
+      <div class="hero-stat">
+        <div class="hero-stat-num">21<small>天</small></div>
+        <div class="hero-stat-label">MVP 冲刺跑通"成交闭环"</div>
+      </div>
+    </div>
+    <div class="stats-tags">
+      <span class="hero-tag">AI Agent 编队</span>
+      <span class="hero-tag">储能 / 光伏出口</span>
+      <span class="hero-tag">Outcome-based</span>
+      <span class="hero-tag">自用先行 → 产品化</span>
+      <span class="hero-tag">21 天冲刺</span>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== TOC ======================== -->
+<nav class="toc">
+  <div class="wrap">
+    <div class="toc-title">— 目录 / Table of Contents</div>
+    <div class="toc-grid">
+      <a class="toc-item" href="#s1"><span class="toc-item-num">01</span>这份文档是什么</a>
+      <a class="toc-item" href="#s2"><span class="toc-item-num">02</span>30 秒读懂全篇</a>
+      <a class="toc-item" href="#s3"><span class="toc-item-num">03</span>我们的现状（手动流程剖析）</a>
+      <a class="toc-item" href="#s4"><span class="toc-item-num">04</span>七大痛点（为什么必须做）</a>
+      <a class="toc-item" href="#s5"><span class="toc-item-num">05</span>三类同行参照（苏杭 / 龙虾 Hermes / 海外）</a>
+      <a class="toc-item" href="#s6"><span class="toc-item-num">06</span>产品定位：增长引擎，不是工具</a>
+      <a class="toc-item" href="#s7"><span class="toc-item-num">07</span>产品架构：6 个 AI Agent 编队</a>
+      <a class="toc-item" href="#s8"><span class="toc-item-num">08</span>从手动到 AI 的全流程映射</a>
+      <a class="toc-item" href="#s9"><span class="toc-item-num">09</span>五大杀手锏</a>
+      <a class="toc-item" href="#s10"><span class="toc-item-num">10</span>21 天冲刺行动计划</a>
+      <a class="toc-item" href="#s11"><span class="toc-item-num">11</span>技术栈与基础设施</a>
+      <a class="toc-item" href="#s12"><span class="toc-item-num">12</span>商业模式（自用 → 产品化）</a>
+      <a class="toc-item" href="#s13"><span class="toc-item-num">13</span>12 个月路线图</a>
+      <a class="toc-item" href="#s14"><span class="toc-item-num">14</span>团队分工与职责</a>
+      <a class="toc-item" href="#s15"><span class="toc-item-num">15</span>度量、复盘与决策机制</a>
+      <a class="toc-item" href="#s16"><span class="toc-item-num">16</span>FAQ / 关键决策记录</a>
+    </div>
+  </div>
+</nav>
+
+<!-- ======================== 01 ======================== -->
+<section id="s1">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">01 — Document Purpose</div>
+      <h2>这份文档是什么<br />不是什么</h2>
+      <p class="lead">
+        在我们正式动手之前，把所有人脑子里的"我以为"对齐到同一份白纸上。
+      </p>
+    </div>
+
+    <div class="grid-2">
+      <div class="card">
+        <div class="card-num">是什么 · WHAT IT IS</div>
+        <h4>团队作战图</h4>
+        <ul>
+          <li>讲清楚我们要做的<strong>到底是什么产品</strong>，定位、形态、边界都明确</li>
+          <li>把<strong>现状（手动流程）</strong>和<strong>未来态（AI 引擎）</strong>对照清楚</li>
+          <li>列出未来 <strong>21 天</strong> 每一天要做的事，可以直接拆任务执行</li>
+          <li>定义<strong>成败指标</strong>，不达标就停、就改、就推倒重来</li>
+          <li>记录<strong>关键决策</strong>，方便半年后回头看我们当时怎么想的</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-num">不是什么 · WHAT IT'S NOT</div>
+        <h4>不是融资 BP</h4>
+        <ul>
+          <li>这是<strong>我们自己投钱、自己干</strong>的项目，不需要给投资人讲故事</li>
+          <li>不算 TAM、不画估值曲线、不堆"万亿市场"等空话</li>
+          <li>不承诺确定性 — 早期方向<strong>会变</strong>，留出试错空间</li>
+          <li>不是"把所有功能都列出来"的需求清单 — <strong>砍掉的比保留的更重要</strong></li>
+          <li>不是写给客户看的营销文案 — 这里说的是<strong>大白话和真实顾虑</strong></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-tag">— 阅读约定 —</span>
+      <h4>读完这份文档，每个人应该能回答 5 个问题</h4>
+      <p>
+        ① 我们做的产品和"传统外贸 SaaS 工具"有什么本质不同？<br>
+        ② 为什么我们说自己能做得比苏杭 Solar 更好？<br>
+        ③ 6 个 AI Agent 各自负责什么？谁先上、谁后上？<br>
+        ④ 21 天后我们要拿出什么？拿不出怎么办？<br>
+        ⑤ 我接下来 2 周要交付什么具体的东西？
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 02 TL;DR ======================== -->
+<section id="s2" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">02 — TL;DR</div>
+      <h2>30 秒读懂<br />我们在做什么</h2>
+    </div>
+
+    <div class="grid-4">
+      <div class="card">
+        <div class="card-num">— 是什么</div>
+        <h4>AI 外贸增长引擎</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          一支由 6 个 AI Agent 组成的"虚拟海外销售团队"，<strong>24/7</strong>替人做线索挖掘、客户研究、个性化开发信、跟进、回复，直到约到会议、推动成交。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 卖什么</div>
+        <h4>结果，不是功能</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          客户不需要懂 AI、不需要学操作。他买的是<strong>"本月你帮我约到 17 个高质量会议、3 笔成交、ROI 8 倍"</strong>。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 谁先用</div>
+        <h4>我们自己</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          先在<strong>储能 / 光伏</strong>赛道用真实业务跑 3-6 个月，跑出第一批真实成交，再产品化对外。<strong>不 dogfood，不上线。</strong>
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 凭什么赢</div>
+        <h4>Agent + 垂直 + 数据</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          多 Agent 编队（前沿）+ 垂直行业 know-how（深度）+ 跑出来的销售剧本库（壁垒）。三件事同时押注。
+        </p>
+      </div>
+    </div>
+
+    <div class="pull-quote">
+      <p class="pull-quote-text">
+        我们不做"<em>更好的 Snovio</em>"，我们做<em>能替你成交</em>的 AI 销售团队。
+      </p>
+      <div class="pull-quote-attr">— 内部共识 / 北极星指标</div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 03 现状 ======================== -->
+<section id="s3">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">03 — Current State</div>
+      <h2>我们的现状<br />一份诚实的手动流程清单</h2>
+      <p class="lead">
+        以下是我们目前在储能 / 光伏赛道做外贸开发的真实工作流。每一步都是亲手做过、踩过坑、知道哪里慢哪里痛的环节。
+      </p>
+    </div>
+
+    <h3>当前 8 步手动流程</h3>
+
+    <div class="flow">
+      <div class="flow-step">
+        <div class="flow-step-num">01</div>
+        <div>
+          <div class="flow-step-title">Google 关键词搜索</div>
+          <div class="flow-step-detail">围绕行业关键词如 "Energy Storage System"、细分到 "Commercial Energy Storage System"，定位 installer / distributor / wholesaler / EPC 等不同采购角色组合。</div>
+        </div>
+        <div class="flow-step-tools">Google + 行业词库</div>
+        <div class="flow-step-time">~3 小时/天</div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">02</div>
+        <div>
+          <div class="flow-step-title">逐页翻找目标公司</div>
+          <div class="flow-step-detail">一页页过结果，看公司官网、找 info / sales / contact 邮箱。一个有效公司常常要翻 10 个无效公司。</div>
+        </div>
+        <div class="flow-step-tools">人工 + 浏览器</div>
+        <div class="flow-step-time">~2 小时/天</div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">03</div>
+        <div>
+          <div class="flow-step-title">Snovio 提取域名邮箱</div>
+          <div class="flow-step-detail">用 Snovio 这个 Google 插件按公司域名抓邮箱，能细分到职位（小公司常常没有数据）。</div>
+        </div>
+        <div class="flow-step-tools">Snov.io 插件</div>
+        <div class="flow-step-time">~1 小时/天</div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">04</div>
+        <div>
+          <div class="flow-step-title">电商溯源 + LinkedIn / Apollo</div>
+          <div class="flow-step-detail">从 Amazon 爆款卖家溯源决策人；用 Apollo.io 拉 LinkedIn 联系人；筛邮箱有效性。同步 Facebook / 其他社媒交叉验证决策人。</div>
+        </div>
+        <div class="flow-step-tools">Apollo.io · LinkedIn</div>
+        <div class="flow-step-time">~2 小时/天</div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">05</div>
+        <div>
+          <div class="flow-step-title">展会名录挖掘</div>
+          <div class="flow-step-detail">找相关行业展会主办方官网，下载展商名录，筛选海外采购商或对中国有采购需求的公司，再通过 Facebook / LinkedIn 找到决策人邮箱。</div>
+        </div>
+        <div class="flow-step-tools">展会官网 · 名录 PDF/Excel</div>
+        <div class="flow-step-time">~1.5 小时/天</div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">06</div>
+        <div>
+          <div class="flow-step-title">汇总到 Excel/CSV → 群发</div>
+          <div class="flow-step-detail">用 Mailgun / SendGrid / SparkPost / ElasticEmail / Sendinblue 等工具群发；或自建发件做预热，加变量做"伪个性化"开发信。</div>
+        </div>
+        <div class="flow-step-tools">Mailgun · SendGrid · 自建预热</div>
+        <div class="flow-step-time">~2 小时/天</div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">07</div>
+        <div>
+          <div class="flow-step-title">社交媒体经营 + 付费投放</div>
+          <div class="flow-step-detail">LinkedIn 会员每周加满人；Facebook 跑国家+行业+职位定向广告做精准营销；多平台同步发推广文案/视频/图片。</div>
+        </div>
+        <div class="flow-step-tools">LinkedIn Sales Nav · Facebook Ads</div>
+        <div class="flow-step-time">~1.5 小时/天</div>
+      </div>
+
+      <div class="flow-step">
+        <div class="flow-step-num">08</div>
+        <div>
+          <div class="flow-step-title">竞争力分析 + HS 编码 + 询盘回复</div>
+          <div class="flow-step-detail">分析行业新闻 / 国家政策影响做简报；行业 conference 重点 post 做总结；HS 编码查询产品国际竞争力；客户回复邮件后业务员针对性回复。</div>
+        </div>
+        <div class="flow-step-tools">行业媒体 · 海关 HS · 邮件</div>
+        <div class="flow-step-time">~2 小时/天</div>
+      </div>
+    </div>
+
+    <div class="callout" style="background: var(--rose); margin-top: 32px;">
+      <span class="callout-tag" style="color: white;">— 数字账 —</span>
+      <h4>一位业务员每天 ≈ 15 小时工作量塞进 8-10 小时</h4>
+      <p>
+        换算下来：一个业务员一周能精准触达的客户约 50-100 个，回复率 0.5-1%，能进入"真实对话"的客户每周 ≤ 3 个，能成交的每月 ≤ 1 个。
+        <strong style="color: white;">这不是能力问题，是流程问题。</strong>
+        靠堆人解决，是苏杭那条路；靠 AI Agent 重构流程，是我们这条路。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 04 痛点 ======================== -->
+<section id="s4" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">04 — Pain Points</div>
+      <h2>七大痛点<br />为什么这件事必须做</h2>
+      <p class="lead">
+        以下痛点全部来自一线，不是我们关在办公室想出来的。每一条后面都跟着我们想用 AI 怎么解决。
+      </p>
+    </div>
+
+    <div class="pain-list">
+      <div class="pain-row">
+        <div class="pain-num">PAIN · 01</div>
+        <div>
+          <div class="pain-title">信息获取效率低</div>
+          <div class="pain-detail">手动在 Google、LinkedIn、Apollo、展会名录等平台搜索客户，耗时耗力且覆盖面有限。</div>
+        </div>
+        <div class="pain-quote">一个业务员一天最多覆盖 30-50 家公司，绝大部分是无效翻找。</div>
+      </div>
+
+      <div class="pain-row">
+        <div class="pain-num">PAIN · 02</div>
+        <div>
+          <div class="pain-title">线索处理成本高</div>
+          <div class="pain-detail">手动提取、整理、验证邮箱地址，过程繁琐且易出错。即使用 Snovio 等工具，仍需大量人工补全。</div>
+        </div>
+        <div class="pain-quote">10 个邮箱里 3 个失效、2 个不是决策人，剩下 5 个里只有 1 个值得跟。</div>
+      </div>
+
+      <div class="pain-row">
+        <div class="pain-num">PAIN · 03</div>
+        <div>
+          <div class="pain-title">沟通触达效果差</div>
+          <div class="pain-detail">通用邮件模板群发，缺乏针对性和个性化，客户回复率极低；个性化又写不过来。</div>
+        </div>
+        <div class="pain-quote">行业群发回复率 &lt; 1%，伪个性化（变量替换）回复率 ≈ 1.5%，真个性化能到 8-15%。</div>
+      </div>
+
+      <div class="pain-row">
+        <div class="pain-num">PAIN · 04</div>
+        <div>
+          <div class="pain-title">客户筛选难度大</div>
+          <div class="pain-detail">缺乏精准画像工具，无法有效识别高意向客户，所有线索一视同仁，精力浪费严重。</div>
+        </div>
+        <div class="pain-quote">业务员 80% 时间花在 20% 不会成交的客户身上，剩下高价值客户跟得不够紧。</div>
+      </div>
+
+      <div class="pain-row">
+        <div class="pain-num">PAIN · 05</div>
+        <div>
+          <div class="pain-title">市场洞察能力弱</div>
+          <div class="pain-detail">缺乏系统性工具，难以高效分析全球市场趋势、政策变化、竞品动态，决策靠"听说"。</div>
+        </div>
+        <div class="pain-quote">行业大事只有事后才知道，错过窗口期才知道有过窗口期。</div>
+      </div>
+
+      <div class="pain-row">
+        <div class="pain-num">PAIN · 06</div>
+        <div>
+          <div class="pain-title">回复响应不及时</div>
+          <div class="pain-detail">客户询盘出现在凌晨 3 点（时差），业务员第二天才回复，热度已经凉。多渠道询盘分散，容易漏。</div>
+        </div>
+        <div class="pain-quote">客户的"高峰兴趣窗口"通常只有 6-12 小时，过了就要重新唤醒。</div>
+      </div>
+
+      <div class="pain-row">
+        <div class="pain-num">PAIN · 07</div>
+        <div>
+          <div class="pain-title">域名 / 邮箱预热痛苦</div>
+          <div class="pain-detail">自己群发容易被归类垃圾邮件、域名降级直至废弃；预热又需要持续模拟"真人发送"，无人专门干这件事。</div>
+        </div>
+        <div class="pain-quote">一个废弃的发件域名 = 半年的精力 + 三个月的投递信誉积累全部归零。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 05 苏杭 ======================== -->
+<section id="s5">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">05 — Competitive Landscape</div>
+      <h2>三类同行参照<br />全景剖析与制胜逻辑</h2>
+      <p class="lead">
+        市场上对"AI 外贸"赛道发起冲击的，是三类完全不同形态的对手：<strong>服务型</strong>（苏杭这样的人力外包公司）、<strong>工具型</strong>（龙虾、Hermes 这样的国内 AI 外贸 SaaS）、<strong>通用型</strong>（Clay、Smartlead、Apollo 这样的海外冷邮件平台）。
+        我们要赢，必须搞清楚每一类对手卖的是什么、卡在哪里、为什么外贸老板最终会选我们。
+      </p>
+    </div>
+
+    <h3 style="margin-top: 0;">5.1 第一类 · 服务型对手 — 苏杭 Solar</h3>
+    <p class="body" style="color: var(--muted);">
+      苏杭 Solar（suhang-corp.com）是巴基斯坦的一家数字营销外包公司，2018 年起做营销服务。把它列出来不是为了贬低 — 恰恰相反，他们的服务清单<strong>就是市场需求清单</strong>。
+    </p>
+
+    <h4>苏杭的服务清单（来自其 PPT）</h4>
+    <p class="body">
+      自 2018 年起做市场营销外包，主营帮客户提升网络知名度、吸引新客户、整合在线资源。其服务覆盖：
+    </p>
+    <div class="grid-3" style="margin-top: 16px;">
+      <div class="card">
+        <h4 style="margin-top:0;">社交媒体运营</h4>
+        <p style="font-size: 13px; color: var(--muted);">Facebook、LinkedIn、Instagram、WhatsApp 多平台运营，制作宣传页+视频，与潜在买家建立联系</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0;">付费广告投放</h4>
+        <p style="font-size: 13px; color: var(--muted);">基于位置和行业信息精确锁定，多平台广告投放，定向推广</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0;">邮件营销</h4>
+        <p style="font-size: 13px; color: var(--muted);">建立专业邮箱域名、个性化邮件设计、行业数据推广、确保送达获取询盘</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0;">新客开发 + 寻找客户</h4>
+        <p style="font-size: 13px; color: var(--muted);">利用全球进口商/贸易商/零售商/分销商数据库，多渠道触达，电话+WhatsApp 直接联系</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0;">会展策划与协助</h4>
+        <p style="font-size: 13px; color: var(--muted);">海外参展、邀请买家、列出名单、安排会议、提供本地办事处</p>
+      </div>
+      <div class="card">
+        <h4 style="margin-top:0;">竞品分析 + 月度报告</h4>
+        <p style="font-size: 13px; color: var(--muted);">追踪行业竞品动态，月度提交 KPI / 邮件询盘 / 社媒询盘等全方位报告</p>
+      </div>
+    </div>
+
+    <h4>苏杭的优势 vs 局限</h4>
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th style="width: 18%;">维度</th>
+          <th>苏杭 Solar 的做法</th>
+          <th>我们要做的更好</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-key">交付形态</td>
+          <td class="col-them">人力外包服务（一支团队）</td>
+          <td class="col-us">AI Agent 编队（6 个虚拟角色 24/7 协同）</td>
+        </tr>
+        <tr>
+          <td class="col-key">速度</td>
+          <td class="col-them">每月最多触达几百个客户，月度报告</td>
+          <td class="col-us">每天可触达数千个高匹配客户，分钟级响应买入信号</td>
+        </tr>
+        <tr>
+          <td class="col-key">个性化</td>
+          <td class="col-them">通用模板 + 人工微调，重复性高</td>
+          <td class="col-us">每个客户独立深度档案，每封信引用客户专属事实</td>
+        </tr>
+        <tr>
+          <td class="col-key">渠道协同</td>
+          <td class="col-them">邮件、社媒、电话各自孤立运行</td>
+          <td class="col-us">单客户多渠道协同剧本（邮件→LinkedIn→WhatsApp→Facebook 重定向）</td>
+        </tr>
+        <tr>
+          <td class="col-key">报告 / 决策</td>
+          <td class="col-them">月度 PDF 报告（客户被动看）</td>
+          <td class="col-us">实时仪表盘 + 自动周复盘 + AI 调整下周资源分配</td>
+        </tr>
+        <tr>
+          <td class="col-key">地理覆盖</td>
+          <td class="col-them">巴基斯坦本地视角，对欧美、东南亚理解有限</td>
+          <td class="col-us">内置国家×行业销售剧本库（德国重认证、北美重 ROI、中东重价格谈判节奏）</td>
+        </tr>
+        <tr>
+          <td class="col-key">行业深度</td>
+          <td class="col-them">通用营销服务，不专精任一垂直行业</td>
+          <td class="col-us">先深耕储能/光伏赛道一年，跑出真实数据再扩品类</td>
+        </tr>
+        <tr>
+          <td class="col-key">收费逻辑</td>
+          <td class="col-them">月度服务费（人力定价）</td>
+          <td class="col-us">按结果付费（约到会议/成交分成），与客户利益对齐</td>
+        </tr>
+        <tr>
+          <td class="col-key">学习能力</td>
+          <td class="col-them">人员流动 → 经验流失</td>
+          <td class="col-us">AI 持续学习赢/丢单数据，沉淀进系统永不流失</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <span class="callout-tag">— 苏杭这一类的本质 —</span>
+      <h4>苏杭卖"我们替你做"，我们卖"AI 替你成交"</h4>
+      <p>
+        他们的成本模型是<strong>人力线性增长</strong> — 服务 100 个客户需要雇 100 倍的人。我们的成本模型是<strong>边际趋零</strong> — 服务 100 个客户和 1000 个客户的算力成本差不多。
+        当我们的 Agent 跑起来后，他们想追也追不上，因为他们追的是一支 AI 编队，不是另一家公司。
+      </p>
+    </div>
+
+    <!-- ============= 5.2 工具型对手 ============= -->
+    <h3 style="margin-top: 96px;">5.2 第二类 · 工具型对手 — 龙虾 / Hermes / 通用 AI 外贸 SaaS</h3>
+    <p class="body" style="color: var(--muted);">
+      除了"人力外包"那一类，市场上还有一大批"工具型 AI SaaS" — 龙虾AI、Hermes AI、Smartlead、Lemlist、Apollo 都属于这一类。
+      它们是我们<strong>更直接的竞争者</strong>，也是我们最需要回答清楚"为什么客户最终选我们"的对照组。
+    </p>
+
+    <h4>这些工具卖什么</h4>
+    <div class="grid-3" style="margin-top: 16px;">
+      <div class="card">
+        <div class="card-num">— 国内代表</div>
+        <h4 style="margin-top:0;">龙虾AI 外贸</h4>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+          国内主流"AI 外贸客户开发系统"。主打：客户挖掘 + AI 开发信生成 + 邮件群发 + 跟进管理。
+          典型定价 ¥5K-20K/账号/年。面向中小外贸公司业务员<strong>自助使用</strong>。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 国内代表</div>
+        <h4 style="margin-top:0;">Hermes AI 外贸</h4>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+          AI 外贸营销助手。主打：客户开发 + AI 邮件 + 社媒触达 + 轻量 CRM。
+          典型功能型 SaaS 形态，业务员<strong>需要自己学操作、自己跑流程、自己分析数据</strong>。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 海外代表</div>
+        <h4 style="margin-top:0;">Smartlead / Lemlist / Apollo 等</h4>
+        <p style="font-size: 13px; color: var(--muted); line-height: 1.6;">
+          海外冷邮件 + 自动化跟进工具。模板能力强，但<strong>对中国出口语境不熟</strong>，缺乏本土化（中文支持、对国内业务员习惯、对储能/光伏等行业的深度）。
+        </p>
+      </div>
+    </div>
+
+    <h4 style="margin-top: 40px;">这一类工具的 5 个共同短板</h4>
+    <ul>
+      <li><strong>"功能拼盘" vs "Agent 协同"</strong> — 它们是把"搜客户 / 写信 / 发邮件 / 跟进 / CRM"5 个独立功能放在一个工具里让用户自己串；我们是 6 个 Agent 在 Memory + Learning 层下<strong>自动协同</strong>，业务员不用学怎么"串"。</li>
+      <li><strong>"业务员要学" vs "结果直接交付"</strong> — 它们是工具，业务员要自己学使用、自己写 Prompt、自己审核每一步、自己看数据；我们是引擎，业务员只在<strong>关键节点</strong>（报价、谈判、拍板）介入，其余全自动。</li>
+      <li><strong>"通用模板" vs "垂直行业深度"</strong> — 它们对所有行业一视同仁（卖钢琴、卖家具、卖光伏共用同一套 Prompt）；我们专做储能/光伏，沉淀<strong>行业 know-how</strong>（认证标准、HS 编码、各国补贴政策、采购旺季）。</li>
+      <li><strong>"静态产品" vs "持续学习"</strong> — 它们的 Prompt 库一年更新一次（产品经理改的）；我们的 Prompt 库<strong>每天进化</strong>（A/B 真实数据驱动），且<strong>专属于客户自己的产品和客群</strong>，不和别人共享。</li>
+      <li><strong>"按席位收费" vs "按结果分成"</strong> — 它们卖席位订阅（不管你成不成交，年费照交）；我们底费低 + 真见到客户/真成交才有大头收入，<strong>风险跟客户对齐</strong>。</li>
+    </ul>
+
+    <!-- ============= 5.3 三方对比 ============= -->
+    <h3 style="margin-top: 96px;">5.3 三方对比一览</h3>
+    <p class="body" style="color: var(--muted);">
+      把"服务型"、"工具型"、"我们"放进同一张表里，差异一目了然。
+    </p>
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th style="width: 14%;">维度</th>
+          <th style="color: var(--rose) !important;">苏杭（服务型）</th>
+          <th style="color: var(--rose) !important;">龙虾 / Hermes（工具型）</th>
+          <th style="color: var(--teal) !important;">我们（增长引擎）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-key">交付物</td>
+          <td class="col-them">一支外包团队的工时</td>
+          <td class="col-them">SaaS 工具的功能权限</td>
+          <td class="col-us">业务结果（约到会议 / 成交）</td>
+        </tr>
+        <tr>
+          <td class="col-key">谁在干活</td>
+          <td class="col-them">巴基斯坦本地员工</td>
+          <td class="col-them">业务员自己学着用</td>
+          <td class="col-us">6 个 AI Agent 协同 + 关键节点人工接管</td>
+        </tr>
+        <tr>
+          <td class="col-key">个性化能力</td>
+          <td class="col-them">人工写信，质量靠运气</td>
+          <td class="col-them">变量替换 + 通用 LLM Prompt</td>
+          <td class="col-us">客户独立画像 + 行业 Prompt 库 + A/B 进化</td>
+        </tr>
+        <tr>
+          <td class="col-key">行业深度</td>
+          <td class="col-them">无（通用营销）</td>
+          <td class="col-them">无（all-purpose 工具）</td>
+          <td class="col-us">储能/光伏垂直深度 → 横向扩</td>
+        </tr>
+        <tr>
+          <td class="col-key">数据反哺</td>
+          <td class="col-them">员工经验，离职就丢</td>
+          <td class="col-them">所有客户共享通用模板</td>
+          <td class="col-us">专属于客户的 Prompt 库 + 销售剧本</td>
+        </tr>
+        <tr>
+          <td class="col-key">渠道协同</td>
+          <td class="col-them">邮件、社媒分团队做</td>
+          <td class="col-them">各模块独立，业务员手动串</td>
+          <td class="col-us">单客户多渠道协同剧本（自动）</td>
+        </tr>
+        <tr>
+          <td class="col-key">响应速度</td>
+          <td class="col-them">8 小时/天 × 5 天，月度报告</td>
+          <td class="col-them">实时但需人工触发每一步</td>
+          <td class="col-us">24/7 自动响应 + 实时仪表盘</td>
+        </tr>
+        <tr>
+          <td class="col-key">收费逻辑</td>
+          <td class="col-them">月度服务费（按人头）</td>
+          <td class="col-them">SaaS 月/年订阅（按席位）</td>
+          <td class="col-us">底费 + 见面 + 成交分成（按结果）</td>
+        </tr>
+        <tr>
+          <td class="col-key">扩展性</td>
+          <td class="col-them">线性 — 加客户要加人</td>
+          <td class="col-them">线性 — 加用户要付费</td>
+          <td class="col-us">边际趋零 — 算力是常量</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <!-- ============= 5.4 为什么外贸人选我们 ============= -->
+    <h3 style="margin-top: 96px;">5.4 为什么外贸人会选我们 · 5 个真实理由</h3>
+    <p class="body" style="color: var(--muted);">
+      这是销售时反复要回答的核心问题。每一条都基于真实场景，不是营销话术。
+    </p>
+
+    <div class="grid-2" style="margin-top: 24px;">
+      <div class="card">
+        <div class="card-num">— 理由 01 / 已经踩过坑</div>
+        <h4>"我用过龙虾 / Hermes，回复率还是 1%"</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          国内外贸公司多数已经买过 1-2 个 AI 工具。结果是开发信回复率仍 1-2%、群发被打成垃圾邮件、域名一旦废掉重建要 3-6 个月。
+          他们要的不是"再多一个工具"，而是<strong>真能把回复率拉到 5%+</strong>的解决方案 — 这正是我们 Writer Agent + 多渠道编排 + 预热池守护要解决的命题。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 理由 02 / 没空学新工具</div>
+        <h4>"我每天 10 小时已经塞满，再学一个工具？"</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          一线业务员的时间表早已饱和。龙虾 / Hermes 是<strong>工具型</strong>产品 — 业务员要自己写 Prompt、自己审核每一步、自己分析数据，等于"再多一份兼职"。
+          我们是<strong>AI 助理型</strong> — 业务员只在关键节点（报价、谈判）介入，其他全交给 AI。等于"多了一个不要工资的助理"。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 理由 03 / 行业深度</div>
+        <h4>"通用工具回答不了我的行业问题"</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          一个储能业务员问"这个客户应该用什么 HS 编码 + 巴西今年储能补贴政策怎样 + 这家公司的采购旺季是几月"，
+          通用工具一概不知。我们专做储能/光伏，从产品认证（CE / UL / IEC）到关税到典型采购周期都内置进系统。
+          深度让客户觉得<strong>"这个工具懂我的活儿"</strong>。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 理由 04 / 风险对齐</div>
+        <h4>"我愿意按结果付费，不愿意买席位"</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          中小外贸老板最怕"花了订阅费但没出效果"。
+          龙虾年费 ¥10K-20K 不管效果好坏都收。我们底费低（覆盖成本）+ 真见到客户 / 真成交了再分成 — <strong>风险全在我们身上</strong>，老板敢于试。
+          只要我们对自己产品有信心，这种收费方式比工具型高出一个量级的获客效率。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 理由 05 / 信任来源</div>
+        <h4>"做外贸的人做的工具，比做工具的人卖给外贸的人更可信"</h4>
+        <p style="font-size: 14px; color: var(--muted); line-height: 1.65;">
+          龙虾 / Hermes 是产品公司 — 他们没有自己跑外贸业务，所有"成功案例"都是客户单方面提供的。
+          我们自己就在做储能外贸，<strong>有真实订单、真实回复率、真实成交数据</strong>。
+          外贸老板更信"做这行的人做的工具"。这是别人花钱也补不齐的信任壁垒。
+        </p>
+      </div>
+      <div class="card" style="background: var(--ink); color: white; border-color: var(--ink);">
+        <div class="card-num" style="color: var(--amber);">— 一句话总结</div>
+        <h4 style="color: white;">不是"更便宜的龙虾"<br />是"完全不同的产品形态"</h4>
+        <p style="font-size: 14px; color: rgba(255,255,255,0.78); line-height: 1.65;">
+          客户不是在我们和龙虾 / Hermes 之间做"价格 / 功能"的对比 — 他们是在<strong style="color: var(--amber);">"工具"和"AI 销售团队"之间做选择</strong>。
+          这是品类层面的差异，不是参数层面的差异。
+          这也是为什么我们不和它们打"功能多不多 / 便宜不便宜"的仗。
+        </p>
+      </div>
+    </div>
+
+    <div class="callout" style="margin-top: 40px;">
+      <span class="callout-tag">— 也要诚实承认 —</span>
+      <h4>这些工具不是"差劲的产品"，而是"上一代的产品形态"</h4>
+      <p>
+        龙虾、Hermes、Smartlead 解决了"业务员从 0 到 1 用上 AI"的问题，这一阶段对行业是必要的。
+        我们做的是<strong style="color: var(--amber);">下一代</strong> — 把 AI 从"辅助工具"升级到"协同代理（Agentic AI Team）"。
+        他们的现有客户里大约 30-40% 会发现"工具型不够用"，这部分人就是我们 Phase 2-3 的精准转化对象 — 我们不需要从 0 教育市场，市场已经被前辈预热好了。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 06 定位 ======================== -->
+<section id="s6" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">06 — Positioning</div>
+      <h2>产品定位<br />增长引擎，不是工具</h2>
+      <p class="lead">
+        这是整份文档最重要的一句话。所有产品、营销、定价决策都从这里推导。
+      </p>
+    </div>
+
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th style="width: 22%;">视角</th>
+          <th>"工具"思路（我们要避免）</th>
+          <th>"增长引擎"思路（我们要做的）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-key">客户买的是什么</td>
+          <td class="col-them">功能清单（10 个模块、20 个按钮）</td>
+          <td class="col-us">业务结果（约到 N 个会议、转化 M 笔订单）</td>
+        </tr>
+        <tr>
+          <td class="col-key">客户怎么用</td>
+          <td class="col-them">学习产品手册、自己点按钮</td>
+          <td class="col-us">填一份 ICP 问卷 → AI 自动跑 → 客户审批</td>
+        </tr>
+        <tr>
+          <td class="col-key">销售话术</td>
+          <td class="col-them">"我们有 AI 邮件生成、客户评分、邮箱验证..."</td>
+          <td class="col-us">"我们帮上家储能客户上月约到 17 个高质量会议"</td>
+        </tr>
+        <tr>
+          <td class="col-key">定价逻辑</td>
+          <td class="col-them">按席位 / 按功能模块订阅</td>
+          <td class="col-us">底费 + 按合格商机 / 成交分成</td>
+        </tr>
+        <tr>
+          <td class="col-key">竞品比较</td>
+          <td class="col-them">和 Snovio / Apollo / Mailgun 比功能</td>
+          <td class="col-us">和"雇一个海外销售总监+团队"比 ROI</td>
+        </tr>
+        <tr>
+          <td class="col-key">扩张路径</td>
+          <td class="col-them">加更多功能 → 更多模块 → 更多按钮</td>
+          <td class="col-us">深耕一个行业 → 跑通 → 横向复制到下一行业</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="pull-quote" style="margin: 64px 0 32px;">
+      <p class="pull-quote-text">
+        客户的桌面上有 20 个工具。<br>
+        他真正需要的是<em>一个能交付成交的 AI 团队</em>。
+      </p>
+      <div class="pull-quote-attr">— 产品定位的内部共识</div>
+    </div>
+
+    <h3>"AI 外贸增长引擎"的一句话定义</h3>
+    <div class="card" style="background: var(--ink); color: white; padding: 36px;">
+      <p style="font-family: 'Noto Serif SC', serif; font-size: 22px; line-height: 1.5; color: white; margin: 0;">
+        喂入产品资料和目标行业，由 6 个 AI Agent 协同完成<br>
+        <strong style="color: var(--amber);">线索挖掘 → 客户研究 → 个性化触达 → 自动跟进 → 对话回复 → 推动成交</strong><br>
+        全链路海外销售工作，并以"约到的会议数 / 成交额"作为价值交付衡量。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 07 架构 ======================== -->
+<section id="s7">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">07 — Product Architecture</div>
+      <h2>产品架构<br />6 个 AI Agent 协同编队</h2>
+      <p class="lead">
+        这不是一个 App。这是一支<strong>会自我调度、自我学习、自我进化</strong>的 AI 销售团队。每个 Agent 是一个独立角色，背后是 LLM + 工具集 + 记忆库。
+      </p>
+    </div>
+
+    <div class="arch">
+      <svg viewBox="0 0 1080 540" xmlns="http://www.w3.org/2000/svg">
+        <defs>
+          <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+            <path d="M0,0 L0,6 L9,3 z" fill="#ea580c" />
+          </marker>
+        </defs>
+
+        <!-- Strategy Agent (top center) -->
+        <rect x="380" y="20" width="320" height="80" rx="6" fill="#ea580c" />
+        <text x="540" y="50" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="700">STRATEGY AGENT · 销售总监</text>
+        <text x="540" y="72" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Inter, sans-serif" font-size="11">制定 ICP 优先级、调度 Agent、自动复盘资源分配</text>
+        <text x="540" y="88" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="JetBrains Mono, monospace" font-size="10">Claude Opus 4.7 · 周决策</text>
+
+        <!-- 5 Operational agents -->
+        <rect x="20" y="160" width="200" height="100" rx="6" fill="#1a1a1a" stroke="#ea580c" stroke-width="1" />
+        <text x="120" y="190" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="13" font-weight="700">HUNTER</text>
+        <text x="120" y="208" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Inter, sans-serif" font-size="11">线索挖掘 · 信号雷达</text>
+        <text x="120" y="228" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">Apollo · 展会名录</text>
+        <text x="120" y="244" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">海关数据 · Google News</text>
+
+        <rect x="240" y="160" width="200" height="100" rx="6" fill="#1a1a1a" stroke="#ea580c" stroke-width="1" />
+        <text x="340" y="190" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="13" font-weight="700">PROFILER</text>
+        <text x="340" y="208" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Inter, sans-serif" font-size="11">深度客户画像</text>
+        <text x="340" y="228" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">官网爬取 · LinkedIn</text>
+        <text x="340" y="244" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">财务 · 决策链 · 动态</text>
+
+        <rect x="440" y="160" width="200" height="100" rx="6" fill="#1a1a1a" stroke="#ea580c" stroke-width="1" />
+        <text x="540" y="190" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="13" font-weight="700">WRITER</text>
+        <text x="540" y="208" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Inter, sans-serif" font-size="11">个性化开发信</text>
+        <text x="540" y="228" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">Claude Opus 写信</text>
+        <text x="540" y="244" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">A/B 自动迭代</text>
+
+        <rect x="640" y="160" width="200" height="100" rx="6" fill="#1a1a1a" stroke="#ea580c" stroke-width="1" />
+        <text x="740" y="190" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="13" font-weight="700">OUTREACH</text>
+        <text x="740" y="208" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Inter, sans-serif" font-size="11">多渠道触达编排</text>
+        <text x="740" y="228" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">邮件 · LinkedIn · WhatsApp</text>
+        <text x="740" y="244" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">Facebook 重定向</text>
+
+        <rect x="860" y="160" width="200" height="100" rx="6" fill="#1a1a1a" stroke="#ea580c" stroke-width="1" />
+        <text x="960" y="190" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="13" font-weight="700">CLOSER</text>
+        <text x="960" y="208" text-anchor="middle" fill="rgba(255,255,255,0.8)" font-family="Inter, sans-serif" font-size="11">回复 · 谈判 · 约会议</text>
+        <text x="960" y="228" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">即时响应客户问题</text>
+        <text x="960" y="244" text-anchor="middle" fill="rgba(255,255,255,0.55)" font-family="Inter, sans-serif" font-size="10">关键节点转人工</text>
+
+        <!-- Lines from Strategy to all five -->
+        <line x1="540" y1="100" x2="120" y2="160" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)" />
+        <line x1="540" y1="100" x2="340" y2="160" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)" />
+        <line x1="540" y1="100" x2="540" y2="160" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)" />
+        <line x1="540" y1="100" x2="740" y2="160" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)" />
+        <line x1="540" y1="100" x2="960" y2="160" stroke="#ea580c" stroke-width="1.5" stroke-dasharray="4,3" marker-end="url(#arrow)" />
+
+        <!-- Memory + Learning layer -->
+        <rect x="20" y="320" width="510" height="80" rx="6" fill="#0d9488" />
+        <text x="275" y="350" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="700">MEMORY LAYER · 客户记忆</text>
+        <text x="275" y="372" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Inter, sans-serif" font-size="11">GBRAIN · PGLite + pgvector + Knowledge Graph</text>
+        <text x="275" y="388" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="JetBrains Mono, monospace" font-size="10">每个客户一份动态档案 · 历史触达全记录</text>
+
+        <rect x="550" y="320" width="510" height="80" rx="6" fill="#0d9488" />
+        <text x="805" y="350" text-anchor="middle" fill="white" font-family="Inter, sans-serif" font-size="14" font-weight="700">LEARNING LAYER · 持续学习</text>
+        <text x="805" y="372" text-anchor="middle" fill="rgba(255,255,255,0.85)" font-family="Inter, sans-serif" font-size="11">赢单/丢单反馈 · A/B 自动迭代 · 销售剧本沉淀</text>
+        <text x="805" y="388" text-anchor="middle" fill="rgba(255,255,255,0.6)" font-family="JetBrains Mono, monospace" font-size="10">国家×行业×角色销售剧本库 · 越用越准</text>
+
+        <!-- Arrows from agents to memory layers -->
+        <line x1="120" y1="260" x2="180" y2="320" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+        <line x1="340" y1="260" x2="280" y2="320" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+        <line x1="540" y1="260" x2="380" y2="320" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+        <line x1="740" y1="260" x2="680" y2="320" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+        <line x1="960" y1="260" x2="900" y2="320" stroke="rgba(255,255,255,0.3)" stroke-width="1" />
+
+        <!-- Output bar -->
+        <rect x="20" y="440" width="1040" height="70" rx="6" fill="#fafafa" stroke="#ea580c" stroke-width="1.5" />
+        <text x="540" y="468" text-anchor="middle" fill="#0c0c0c" font-family="Inter, sans-serif" font-size="14" font-weight="700">输出 · OUTPUT</text>
+        <text x="540" y="490" text-anchor="middle" fill="#1a1a1a" font-family="Inter, sans-serif" font-size="12">实时仪表盘 · 高意向客户队列 · AI 起草的回复 · 待审批触达 · 周复盘建议</text>
+      </svg>
+    </div>
+
+    <h3>6 个 Agent 详解</h3>
+
+    <div class="agent-grid">
+      <div class="agent-card">
+        <div class="role">— Agent 01 / 总指挥</div>
+        <div class="name">Strategy Agent</div>
+        <div class="ch">销售总监 · 周决策大脑</div>
+        <p>
+          整个编队的"大脑"。基于上周的真实数据（哪条渠道 ROI 高、哪类 ICP 转化好、哪个国家市场升温），自动调整下周的资源分配和优先级。
+        </p>
+        <ul class="duties">
+          <li>读取 Memory + Learning 层数据</li>
+          <li>更新 ICP 优先级（行业、国家、公司规模）</li>
+          <li>给 Hunter 下发本周线索目标数量与方向</li>
+          <li>识别"应该停止跟进"的低价值客户，让 Closer 转给 nurture 队列</li>
+          <li>生成周复盘报告 → 推送给团队</li>
+        </ul>
+        <div class="stack">Claude Opus 4.7 · 每周一次决策循环 · 人工可干预</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="role">— Agent 02 / 找客户的</div>
+        <div class="name">Hunter Agent</div>
+        <div class="ch">线索挖掘 + 实时信号雷达</div>
+        <p>
+          7×24 监控全球 50+ 数据源，识别"刚拿到融资 / 新进新市场 / 招聘海外销售 / 海关进口记录激增"等买入信号，主动找到正在举手的客户。
+        </p>
+        <ul class="duties">
+          <li>对接 Apollo / Crunchbase / Google News / 海关数据 / 展会名录</li>
+          <li>多维度过滤：行业匹配、国家、公司规模、决策人是否可触达</li>
+          <li>对每个潜在客户输出"信号强度评分"（1-100）</li>
+          <li>触发条件命中时（如客户官网新增"我们正在招中国供应商"）自动推送 Profiler</li>
+          <li>每周交付 100-500 条新线索（按 ICP 严格度调）</li>
+        </ul>
+        <div class="stack">Playwright 爬虫 + 反检测 · Apollo API · Sonnet 4.6 打分</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="role">— Agent 03 / 摸客户底</div>
+        <div class="name">Profiler Agent</div>
+        <div class="ch">深度客户画像 · 作战地图</div>
+        <p>
+          每个目标公司一份 30 维度档案：业务模式、财务概况、决策链、近期动态、竞品关系、采购周期、文化偏好、可触达渠道。
+        </p>
+        <ul class="duties">
+          <li>抓取客户官网、About、产品页、Blog、新闻稿</li>
+          <li>分析 LinkedIn 公司主页、CEO/采购主管动态</li>
+          <li>识别决策链：谁是 Decision Maker、谁是 Influencer、谁是 Gatekeeper</li>
+          <li>识别痛点信号："官网提到要进入新能源市场"、"招聘 EHS 工程师"</li>
+          <li>输出：客户档案 PDF + 结构化数据存入 Memory 层</li>
+        </ul>
+        <div class="stack">Playwright + Crawl4AI · LinkedIn API · Claude Sonnet 4.6</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="role">— Agent 04 / 写信高手</div>
+        <div class="name">Writer Agent</div>
+        <div class="ch">个性化开发信生成 + A/B 进化</div>
+        <p>
+          为每个客户生成 3 个版本（短/长/痛点切入）的开发信，每封信都引用客户<strong>独有</strong>的事实，跳出"AI 痕迹太重 = 进垃圾箱"的死局。
+        </p>
+        <ul class="duties">
+          <li>读取 Profiler 输出 + 我方产品 / 案例库 / 价格信息</li>
+          <li>动态 Prompt 工程：根据客户文化、行业、角色调整语气</li>
+          <li>同时产出 3 个变体 → 跑 A/B → 自动收敛 → 沉淀进 Prompt 库</li>
+          <li>"刻意降级"：加入业务员个人风格、口语化片段、合理拼写习惯</li>
+          <li>多语言：英语为主，西语 / 阿拉伯语 / 法语按目标市场扩展</li>
+        </ul>
+        <div class="stack">Claude Opus 4.7 · 自定义 Prompt 库 · Embedding 检索历史最佳信</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="role">— Agent 05 / 跑触达</div>
+        <div class="name">Outreach Agent</div>
+        <div class="ch">多渠道触达编排</div>
+        <p>
+          单一客户、多渠道协同剧本。不再是"邮件群发完拉倒"，而是邮件 → 没回 → LinkedIn connect → 没回 → WhatsApp → 没回 → Facebook 重定向广告。每一步 AI 决定时机和话术。
+        </p>
+        <ul class="duties">
+          <li>对接 Mailgun + 自建预热池 + SPF/DKIM/DMARC</li>
+          <li>邮件投递监控：打开率、点击率、回复率、bounce 自动重路由</li>
+          <li>LinkedIn 自动 connect + Sales Navigator 跟进</li>
+          <li>WhatsApp Business API 触发（针对中东、南亚、拉美）</li>
+          <li>Facebook 自定义受众重定向广告（针对北美、欧洲）</li>
+          <li>所有触达事件写入 Memory 层，下次决策可参考</li>
+        </ul>
+        <div class="stack">Mailgun · LinkedIn API · WhatsApp API · Meta Ads API · 调度 cron</div>
+      </div>
+
+      <div class="agent-card">
+        <div class="role">— Agent 06 / 临门一脚</div>
+        <div class="name">Closer Agent</div>
+        <div class="ch">对话回复 · 谈判 · 约会议</div>
+        <p>
+          客户回复后接管对话：自动回答 FAQ（价格区间、MOQ、认证、交期）、要规格、约 Zoom 会议、push 决策。临门一脚（敏感谈判、定制报价）转人工。
+        </p>
+        <ul class="duties">
+          <li>解析客户回复 → 意图分类（询价 / 索取资料 / 谈认证 / 婉拒）</li>
+          <li>从 Memory 层读取该客户历史交互 → 给出连贯回复</li>
+          <li>遇到"要报价"等关键节点自动转人工 + 提供作战建议</li>
+          <li>会议自动约：Calendly 集成、时区识别、议程草稿</li>
+          <li>30 天没动静的客户自动进入 nurture 队列</li>
+        </ul>
+        <div class="stack">Claude Opus 4.7 · Calendly · 人工接管节点判断模型</div>
+      </div>
+    </div>
+
+    <h3>知识中枢 · Knowledge Brain（基于 GBRAIN + LLM-WIKI 模式）</h3>
+    <p class="body">
+      6 个 Agent 不是孤立运行 — 他们共享一个<strong>会自我增长的"大脑"</strong>。这是<strong>真正的护城河</strong>：跑半年后我们积累的客户档案、决策人画像、销售剧本库，是后来者无论用多少钱也复制不出来的。
+    </p>
+
+    <div class="callout" style="margin: 24px 0 36px; background: var(--paper); border: 1px solid var(--border); color: var(--ink);">
+      <span class="callout-tag">— 技术选型决策 —</span>
+      <h4 style="color: var(--ink);">不自造轮子，直接采用 GBRAIN（MIT 开源）</h4>
+      <p style="color: var(--muted);">
+        2026 年 4 月，<strong style="color: var(--ink);">Andrej Karpathy（前 OpenAI / Tesla AI 总监）</strong>提出 <strong style="color: var(--amber);">LLM-WIKI 模式</strong>（GitHub Gist，4 月）—— 用 LLM 持续维护一个 markdown 知识库，知识"compound"而非"重新发现"。
+        紧接着 4 月 9 日，<strong style="color: var(--ink);">Garry Tan（Y Combinator 主席）</strong>开源了 <strong style="color: var(--amber);">GBRAIN</strong>（MIT 协议）—— LLM-WIKI 模式的<strong>生产级实现</strong>。
+        <br><br>
+        Garry 自己生产环境跑着 <strong style="color: var(--ink);">17,888 页 / 4,383 人 / 723 公司 / 21 个 cron job</strong>，评测 R@5 达 <strong style="color: var(--ink);">97.9%</strong>，比纯向量 RAG 高 31 个点。
+        几乎为我们这种 "AI Agent 编队 + 客户档案沉淀" 的场景量身设计 —— <strong style="color: var(--amber);">直接采用，不重造</strong>。
+      </p>
+    </div>
+
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-num">— 三层架构</div>
+        <h4>Brain Repo + Engine + Skills</h4>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.65;">
+          <strong>① Brain Repo</strong>：git 管理的 markdown 文件（人类永远可读可编辑）。<br>
+          <strong>② Brain Engine</strong>：内嵌 PGLite + pgvector，2 秒就绪，无需 Docker。<br>
+          <strong>③ Skills</strong>：29 个开箱即用的 AI 技能脚本（query / ingest / enrich / lint）。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 三种检索</div>
+        <h4>RRF 混合搜索</h4>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.65;">
+          <strong>HNSW 向量</strong>（语义相似）+ <strong>Postgres tsvector</strong>（关键词精准）+ <strong>知识图谱遍历</strong>（关系查询），三路并行 + Reciprocal Rank Fusion。
+          一次 query 同时搜得到 "南亚储能 EPC" 和 "Ali Khan 的客户都谈过什么"。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 自动维护</div>
+        <h4>21 个 cron job · 24/7</h4>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.65;">
+          高频（10-30 分钟）扫邮件 / 社媒；中频（1-3 小时）跑信号雷达；每日生成早报；每周 lint 检查矛盾、过时、孤儿页面、缺失链接。<strong>大脑在我们睡觉时自己变聪明。</strong>
+        </p>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 64px;">外贸场景下的 Brain 目录结构（10 个核心目录）</h3>
+    <p class="body">
+      GBRAIN 默认 20 个目录，我们裁剪到 8 个核心 + 2 个外贸自定义目录。所有数据按 <strong>MECE 原则</strong>归档（每条信息只能进一个目录），杜绝重复和歧义。
+    </p>
+
+    <div class="card" style="background: var(--ink); color: white; padding: 32px; margin-top: 20px; font-family: 'JetBrains Mono', monospace; font-size: 13px; line-height: 1.7; overflow-x: auto;">
+<pre style="margin: 0; color: rgba(255,255,255,0.9); font-family: inherit; font-size: inherit; white-space: pre;">brain/
+├── <span style="color: var(--amber);">RESOLVER.md</span>          # 决策树：新数据进哪个目录
+├── <span style="color: var(--amber);">schema.md</span>             # 外贸专属 schema 规范（页面模板 / 链接类型）
+│
+├── companies/             # 目标公司档案（每个公司一份）
+│   ├── solar-edge-pakistan.md
+│   └── ese-installer-germany.md
+│
+├── people/                # 决策人 / 联系人画像（30+ 字段：偏好、动机、沟通风格）
+│   ├── ali-khan-solar-edge.md
+│   └── thomas-mueller-ese.md
+│
+├── deals/                 # 进行中的商机（每个 Deal 一份，含 Stakeholder Map）
+├── meetings/              # Zoom / 电话 / 现场会议记录（自动抽参会人入图谱）
+├── sources/               # 邮件原文 / LinkedIn 截图 / 展会名录 PDF（不可改）
+│   └── .raw/              # 原始 API 响应（永远保留，便于回溯）
+├── concepts/              # 行业知识（HS 编码 / 各国补贴 / 认证 / 政策）
+│
+│  ★ <span style="color: var(--teal);">外贸自定义目录（核心壁垒）</span>
+├── playbooks/             # 销售剧本库（国家 × 行业 × 角色 维度）
+│   ├── pakistan-epc-cold-outreach.md
+│   ├── german-distributor-objection-handling.md
+│   └── middle-east-price-negotiation-rhythm.md
+├── products/              # 我方产品资料库（规格 / 案例 / 价格 / 认证）
+│
+└── archive/               # 已成交 / 已丢单 / 历史归档（不删，留着学习）</pre>
+    </div>
+
+    <h3 style="margin-top: 64px;">关键页面模板 · Page Template</h3>
+    <p class="body">
+      每一份"客户档案"和"决策人画像"都按统一模板写。模板不是给人填的 —— 是给 <strong>Profiler Agent 自动生成 + 后续 Agent 读取</strong>用的。
+      下面是公司页 / 决策人页 / Deal 页的核心字段示例：
+    </p>
+
+    <div class="grid-2" style="margin-top: 24px;">
+      <div class="card">
+        <div class="card-num">— companies/solar-edge-pakistan.md</div>
+        <h4>公司档案模板</h4>
+        <ul style="font-size: 13.5px; color: var(--ink-2); line-height: 1.7;">
+          <li><strong>State：</strong>业务类型 / 阶段 / 国家 / 规模 / 营收 / 采购周期</li>
+          <li><strong>关键人 / 意向分：</strong>用 [[link]] 自动建图谱关联</li>
+          <li><strong>Buying Signals：</strong>最近 30 天的买入信号（融资 / 招标 / 招聘）</li>
+          <li><strong>Open Threads：</strong>当前未完成的事项（要 ping 谁、要发什么）</li>
+          <li><strong>Competitive Landscape：</strong>当前供应商、我方差异化优势</li>
+          <li><strong>Timeline：</strong>append-only 时间线，不可改，永远保留证据</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-num">— people/ali-khan-solar-edge.md</div>
+        <h4>决策人档案模板（30+ 字段）</h4>
+        <ul style="font-size: 13.5px; color: var(--ink-2); line-height: 1.7;">
+          <li><strong>State：</strong>角色 / 公司 / 关系类型 / 任期 / 多 ID（LinkedIn / Email / WhatsApp）</li>
+          <li><strong>What They Believe：</strong>价值观、技术偏好（基于公开发言）</li>
+          <li><strong>What Motivates Them：</strong>个人 KPI、个人品牌追求</li>
+          <li><strong>Communication Style：</strong>偏好长 / 短信、回复时段、能被引用激励</li>
+          <li><strong>Hobby Horses：</strong>常聊的痛点、热衷议题</li>
+          <li><strong>Assessment：</strong>能力评估 / 净判断 / 置信度 / 上次评估时间</li>
+          <li><strong>Relationship：</strong>累计触达 / 回复 / 当前 Deal 状态</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3 style="margin-top: 64px;">Brain vs Memory 的纪律 · 这条线不能混</h3>
+    <p class="body">
+      GBRAIN 给我们最重要的纪律是<strong>区分两层信息</strong>：什么进 Brain（持久），什么留在 Agent Memory（运行时）。一旦混了，Brain 会变成垃圾池。
+    </p>
+
+    <table class="vs-table" style="margin-top: 16px;">
+      <thead>
+        <tr>
+          <th style="width: 22%;">类别</th>
+          <th style="color: var(--teal) !important;">进 Brain（持久 · GBRAIN）</th>
+          <th style="color: var(--rose) !important;">留 Memory（运行时 · Agent 内存）</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-key">客户事实</td>
+          <td class="col-us">客户公司业务、规模、决策链、采购周期</td>
+          <td class="col-them">本轮对话中临时引用的最新数据</td>
+        </tr>
+        <tr>
+          <td class="col-key">决策人画像</td>
+          <td class="col-us">沟通风格、技术偏好、动机、关系状态</td>
+          <td class="col-them">本次邮件起草的 prompt 上下文</td>
+        </tr>
+        <tr>
+          <td class="col-key">行业知识</td>
+          <td class="col-us">HS 编码、各国补贴政策、认证要求</td>
+          <td class="col-them">本次查询临时缓存的 API 响应</td>
+        </tr>
+        <tr>
+          <td class="col-key">销售剧本</td>
+          <td class="col-us">沉淀过的"国家 × 行业 × 角色"剧本（赢/丢单复盘）</td>
+          <td class="col-them">本次 A/B 实验的中间状态</td>
+        </tr>
+        <tr>
+          <td class="col-key">Deal 状态</td>
+          <td class="col-us">Deal 阶段、Stakeholder Map、Risk、Next Action</td>
+          <td class="col-them">当前正在生成的 follow-up 草稿</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout" style="margin-top: 32px;">
+      <span class="callout-tag">— 为什么这是真正的护城河 —</span>
+      <h4>知识每天 compound · 后来者再有钱也追不上</h4>
+      <p>
+        通用 AI 工具（龙虾 / Hermes）的 Prompt 库是<strong>所有客户共享</strong>的，不会针对单一客户进化；
+        我们的 Brain 是<strong>每个客户专属的</strong>知识中枢，跑 6 个月后，里面有这家客户的 1000 个客户档案、500 个决策人画像、80 份销售剧本 —— 这些数据<strong style="color: var(--amber);">用钱买不到，用人堆不出来</strong>。
+        这就是 GBRAIN 给我们的最大礼物：<strong style="color: white;">一个会复利增长的资产，而不是一个一次性使用的工具。</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 08 映射 ======================== -->
+<section id="s8" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">08 — Mapping</div>
+      <h2>从手动到 AI<br />全流程映射对照</h2>
+      <p class="lead">
+        把第 03 节列的 8 步手动流程，逐一映射到 6 个 Agent。这张表是"我们到底在替代什么"的最直白回答。
+      </p>
+    </div>
+
+    <table class="map-table">
+      <thead>
+        <tr>
+          <th style="width: 5%;">#</th>
+          <th style="width: 30%;">手动做法（现状）</th>
+          <th style="width: 4%; text-align: center;">→</th>
+          <th style="width: 30%;">AI 做法（未来）</th>
+          <th style="width: 31%;">对应 Agent + 实现要点</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>01</strong></td>
+          <td class="manual">Google 关键词搜行业、找 installer / distributor / wholesaler</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">AI 多维度爬取 + 语义分析，自动按 ICP 输出潜在客户列表</td>
+          <td><span class="agent-tag">HUNTER</span> Apollo API + Google News + 行业词库扩展</td>
+        </tr>
+        <tr>
+          <td><strong>02</strong></td>
+          <td class="manual">逐页翻找公司、找 info / sales 邮箱</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">自动抓官网 + 找到决策人 + 验证邮箱有效性</td>
+          <td><span class="agent-tag">HUNTER</span><span class="agent-tag">PROFILER</span> Playwright 爬取 + ZeroBounce 验证</td>
+        </tr>
+        <tr>
+          <td><strong>03</strong></td>
+          <td class="manual">Snovio 插件抓域名邮箱（细分职位）</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">直接调用 Apollo / Hunter.io API，按职位过滤决策人</td>
+          <td><span class="agent-tag">PROFILER</span> Apollo API + 职位优先级模型</td>
+        </tr>
+        <tr>
+          <td><strong>04</strong></td>
+          <td class="manual">Amazon 溯源 + LinkedIn / Apollo 找决策人 + Facebook 验证</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">多源数据自动交叉验证，识别真实决策链 + 可触达渠道</td>
+          <td><span class="agent-tag">PROFILER</span> 决策链图谱 + 多源 ID 关联</td>
+        </tr>
+        <tr>
+          <td><strong>05</strong></td>
+          <td class="manual">展会主办方官网下载展商名录、PDF 筛选</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">自动监听全球 200+ 行业展会、爬取展商名单、识别中国采购方</td>
+          <td><span class="agent-tag">HUNTER</span> 展会日历 + PDF 解析 + 自动入库</td>
+        </tr>
+        <tr>
+          <td><strong>06</strong></td>
+          <td class="manual">Excel 汇总 → Mailgun / SendGrid 群发 / 自建预热</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">AI 写每封定制信 + 自动调度发送时间 + 自建预热池保护域名</td>
+          <td><span class="agent-tag">WRITER</span><span class="agent-tag">OUTREACH</span> Claude Opus 写信 + Mailgun + 智能预热</td>
+        </tr>
+        <tr>
+          <td><strong>07</strong></td>
+          <td class="manual">LinkedIn 加人 / Facebook 行业广告 / 多平台同步发帖</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">单客户多渠道协同剧本 + AI 决定何时切换渠道</td>
+          <td><span class="agent-tag">OUTREACH</span> 跨渠道编排引擎 + Facebook Ads API</td>
+        </tr>
+        <tr>
+          <td><strong>08</strong></td>
+          <td class="manual">行业新闻分析 / HS 编码查询 / 询盘人工回复</td>
+          <td class="arrow" style="text-align:center;">→</td>
+          <td class="auto">AI 自动生成市场洞察 + HS 编码推荐 + 询盘秒级 AI 起草回复</td>
+          <td><span class="agent-tag">STRATEGY</span><span class="agent-tag">CLOSER</span> NLP 舆情 + BERT HS 分类 + GPT 起草</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <span class="callout-tag">— 设计原则 —</span>
+      <h4>不替代"人工判断"，替代"人工搬运"</h4>
+      <p>
+        AI 做的是搜集、整理、起草、调度、提醒 — 占了原工作 80% 的"机械搬运"部分。
+        关键节点（报价、谈判、定制方案）依然是人来做，但人不再被埋在重复劳动里，可以专注高价值环节。
+        <strong style="color: white;">业务员是飞行员，AI 是副驾驶 + 全套地勤。</strong>
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 09 杀手锏 ======================== -->
+<section id="s9">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">09 — Differentiation</div>
+      <h2>五大杀手锏<br />比苏杭 / 11x / Clay 更前沿</h2>
+      <p class="lead">
+        市面上已有 11x.ai、Clay.com、Smartlead 等"AI BDR"工具，他们做得不差。但我们有 5 个他们没做或没法做的事 — 这些是我们的护城河起点。
+      </p>
+    </div>
+
+    <div class="killer">
+      <div class="killer-num">01</div>
+      <div>
+        <div class="killer-tag">BUYING SIGNAL RADAR</div>
+        <div class="killer-title">实时买入信号雷达</div>
+        <div class="killer-body">
+          监控全球 50+ 数据源 — 公司新闻、招聘网站、展会注册表、海关进口记录、SEC/IPO 文件、新建工厂卫星图。
+          AI 实时打分，发现<strong>"正在举手"</strong>的客户。
+        </div>
+        <div class="killer-vs">
+          <strong>VS 苏杭：</strong>他们漫撒网，我们狙击正在举手的客户。 &nbsp;&nbsp; <strong>VS 龙虾/Hermes：</strong>它们给你一份"潜在客户列表"让你自己挑，我们直接告诉你"这家公司昨天发了招标公告，今天就该联系"。 &nbsp;&nbsp; <strong>VS Clay/Apollo：</strong>它们是 list builder（列表生成），我们是 signal triggered（信号触发）。
+        </div>
+      </div>
+    </div>
+
+    <div class="killer">
+      <div class="killer-num">02</div>
+      <div>
+        <div class="killer-tag">MULTIMODAL PROFILE</div>
+        <div class="killer-title">多模态客户画像</div>
+        <div class="killer-body">
+          不只是文字。AI 分析客户官网截图（识别其品牌定位）、LinkedIn 视频（识别 CEO 风格）、社媒图片（识别市场重心）、Google Maps 卫星图（识别工厂规模）。
+          客户的"非语言信息"，对手抓不到。
+        </div>
+        <div class="killer-vs">
+          <strong>VS 现有工具：</strong>它们只读文字，我们读懂客户的"视觉气质"，开发信能直击审美和文化偏好。
+        </div>
+      </div>
+    </div>
+
+    <div class="killer">
+      <div class="killer-num">03</div>
+      <div>
+        <div class="killer-tag">DIGITAL TWIN</div>
+        <div class="killer-title">数字孪生客户 · 销售模拟器</div>
+        <div class="killer-body">
+          为每个高价值客户建一个 LLM 驱动的"数字双胞胎"。业务员在发邮件前，可以先问 AI："如果我用这个角度切，他会怎么回？"
+          <strong>这是真正的"销售对练场"</strong>，11x.ai 和 Clay 都没做。
+        </div>
+        <div class="killer-vs">
+          <strong>VS 一切现有产品：</strong>从"AI 替你发"升级到"AI 帮你彩排+替你发"，决策权回到业务员手上但效率翻倍。
+        </div>
+      </div>
+    </div>
+
+    <div class="killer">
+      <div class="killer-num">04</div>
+      <div>
+        <div class="killer-tag">AUTO A/B EVOLUTION</div>
+        <div class="killer-title">自动 A/B 进化引擎</div>
+        <div class="killer-body">
+          1000 封开发信用 10 个变体跑，AI 自动跟踪哪个版本回复率高，自动收敛 + 复盘"为什么"+ 沉淀进 Prompt 库。
+          下个月的开发信比这个月的强一截，且这个进化是<strong>专属于你这家公司</strong>的。
+        </div>
+        <div class="killer-vs">
+          <strong>VS 苏杭：</strong>他们的模板一年不变，我们每天进化。 &nbsp;&nbsp; <strong>VS 龙虾/Hermes：</strong>它们的 Prompt 库是产品经理一年改一次，所有客户共享；我们的 Prompt 库是 A/B 真实数据每天进化，且<strong>专属于客户自己的产品和客群</strong>。 &nbsp;&nbsp; <strong>VS 通用 AI 工具：</strong>它们的 Prompt 是给所有人的，我们的是给"你的产品+你的客户群"的。
+        </div>
+      </div>
+    </div>
+
+    <div class="killer">
+      <div class="killer-num">05</div>
+      <div>
+        <div class="killer-tag">CROSS-CULTURAL BRAIN</div>
+        <div class="killer-title">跨文化销售大脑</div>
+        <div class="killer-body">
+          储能 / 光伏出口面对全球客户：巴基斯坦客户讲价是必然、德国客户重认证文档、北美客户重 ROI 测算、中东客户重关系前置。
+          AI 内置<strong>国家 × 行业 × 角色 销售剧本库</strong>，自动适配语气、卖点、价格谈判节奏、文化禁忌。
+        </div>
+        <div class="killer-vs">
+          <strong>VS 苏杭（巴基斯坦视角）：</strong>他们只懂南亚，我们懂全球。 &nbsp;&nbsp; <strong>VS 龙虾/Hermes：</strong>它们的开发信对所有行业、所有国家、所有买家角色用同一套话术；我们针对"储能业务员 × 巴基斯坦 EPC × 项目经理"这种细分场景给出剧本。 &nbsp;&nbsp; <strong>VS 北美 AI BDR 工具：</strong>它们对"中国供应商→海外采购方"的语境理解是空白。
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 10 MVP ======================== -->
+<section id="s10" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">10 — 21 Day Sprint</div>
+      <h2>21 天冲刺<br />跑通最小"成交闭环"</h2>
+      <p class="lead">
+        我们没有 12 周。产品落地窗口只有 <strong>3 个礼拜</strong>。这意味着所有"锦上添花"全砍，只保留一条命脉：
+        <strong>AI 能不能比人类销售更快约到第一个会议</strong>。这是后续所有故事成立的前提。
+      </p>
+    </div>
+
+    <h3>21 天极限范围（做 / 砍 / 推迟）</h3>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-num" style="color: var(--teal);">— ✅ 必做（21 天内必须跑通）</div>
+        <h4>5 件事，一件不能少</h4>
+        <ul>
+          <li><strong>GBRAIN brain init</strong> — 储能行业 schema 落地</li>
+          <li><strong>Hunter（简版）</strong> — Apollo API 拉真实客户</li>
+          <li><strong>Profiler + Writer</strong> — Claude Opus 写 3 版开发信</li>
+          <li><strong>Outreach（最小版）</strong> — Mailgun 发 + 打开/回复追踪</li>
+          <li><strong>Closer（手动+AI）</strong> — 客户回复后 AI 起草，人工把关</li>
+        </ul>
+      </div>
+      <div class="card" style="background: var(--amber-soft); border-color: var(--amber);">
+        <div class="card-num" style="color: var(--amber);">— ⚠ 砍掉（21 天版本省略）</div>
+        <h4>这些先用"绕过去"的办法</h4>
+        <ul>
+          <li><strong>邮件域名预热</strong> — 4 周慢工，砍。<strong>用现成域名</strong>（接受小风险）</li>
+          <li><strong>多 ICP 并行</strong> — 只锁定 <strong>1 个</strong>（巴基斯坦商业储能 EPC）</li>
+          <li><strong>3 轮跟进序列</strong> — 21 天版只发首封 + 1 次 D5 跟进</li>
+          <li><strong>实时仪表盘</strong> — 用 Notion / Sheets 手工记数据，先证明回复率</li>
+          <li><strong>客户档案 PDF 导出</strong> — 直接读 markdown 就行</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="card-num" style="color: var(--rose);">— ✗ 推迟到 Phase 2</div>
+        <h4>等 21 天验收完再说</h4>
+        <ul>
+          <li><strong>Strategy Agent</strong> — 人工周会复盘代替</li>
+          <li><strong>多模态画像</strong> — 卖点功能，不影响成交</li>
+          <li><strong>数字孪生模拟器</strong> — 同上</li>
+          <li><strong>WhatsApp / Facebook Ads</strong> — 邮件没打透不要乱试</li>
+          <li><strong>HS 编码 / 市场洞察</strong> — 不是命脉</li>
+          <li><strong>对外开放</strong> — 先自用</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>3 周冲刺时间线</h3>
+    <div class="timeline">
+
+      <div class="tl-item">
+        <div class="tl-week">Week 1 · Day 1-7 · 地基 + Hunter + Profiler</div>
+        <div class="tl-title">"从零到能查到第一批真实客户档案"</div>
+        <div class="tl-detail">
+          <ul>
+            <li><strong>Day 1：</strong>项目仓库初始化（mono-repo: brain / agents / web / shared）；<code>git clone garrytan/gbrain</code> + <code>gbrain init</code></li>
+            <li><strong>Day 2：</strong>自定义外贸 schema.md（companies / people / deals / playbooks / products / concepts 6 个核心目录），写 RESOLVER.md 决策树</li>
+            <li><strong>Day 3：</strong>Apollo API + Mailgun 接入；定义 1 个 ICP："巴基斯坦商业储能 EPC + Installer"</li>
+            <li><strong>Day 4-5：</strong>Hunter Agent 跑通 — Apollo 拉 50-100 条真实线索 → 自动建 brain/companies/ 公司页 + brain/people/ 决策人页</li>
+            <li><strong>Day 6-7：</strong>Profiler Agent 跑通 — 抓官网 + LinkedIn → 补全档案的"State / Buying Signals / Communication Style"等字段</li>
+            <li><strong>验收（Day 7）：</strong><code>gbrain query "巴基斯坦商业储能 EPC"</code> 能秒回 50+ 公司档案 + 决策人画像，质量达"业务员看完点头说能用"</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">Week 2 · Day 8-14 · Writer + Outreach 闭环</div>
+        <div class="tl-title">"从档案到客户邮箱里的真实开发信"</div>
+        <div class="tl-detail">
+          <ul>
+            <li><strong>Day 8-9：</strong>整理产品资料库 → brain/products/，写 3 份种子销售剧本进 brain/playbooks/（巴基斯坦冷开 / 技术派切入 / 价格派切入）</li>
+            <li><strong>Day 10-11：</strong>Writer Agent 跑通 — 读公司+决策人档案 + playbook → 生成 3 版开发信（短/长/痛点切入）。Prompt 工程加"刻意降级"规则</li>
+            <li><strong>Day 12：</strong>Outreach 最小版上线 — Mailgun + SPF/DKIM/DMARC（用现成域名，跳过预热）；首封 D0 + 跟进 D5 两轮</li>
+            <li><strong>Day 13-14：</strong>真实发出 <strong>50 封</strong>开发信（业务员审核每一封后一键发送），追踪像素 + 回复识别配上</li>
+            <li><strong>验收（Day 14）：</strong>50 封信全部送达；至少 30 封进收件箱；至少 1 封被打开 3 次（强意向信号）</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tl-item">
+        <div class="tl-week">Week 3 · Day 15-21 · Closer + 数据复盘</div>
+        <div class="tl-title">"客户回了之后能不能闭环到约会议"</div>
+        <div class="tl-detail">
+          <ul>
+            <li><strong>Day 15-16：</strong>Closer Agent 接入 — 客户回复 → 意图分类（询价/索资料/谈认证/婉拒）→ AI 起草回复 → 业务员一键发送或改写</li>
+            <li><strong>Day 17：</strong>FAQ 库进 brain/concepts/（MOQ / 价格区间 / 认证 / 交期 / 付款方式），Closer 自动调用</li>
+            <li><strong>Day 18-19：</strong>简版 Notion 仪表盘 + Calendly 集成；每天生成"今日要跟进的 X 个客户 + 建议话术"</li>
+            <li><strong>Day 20：</strong>跑完所有回复，约会议、收集真实指标</li>
+            <li><strong>Day 21：</strong><strong>全员复盘半天</strong> — 写一篇《21 天真实数据复盘》：发了几封、回了几封、约到几个、客户原话怎么说</li>
+            <li><strong>验收（Day 21）：</strong>北极星达标 = <strong>至少约到 1-3 个真实会议</strong>（行业基准群发约会议率 0.3%，我们目标 ≥ 2%）</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="callout" style="margin-top: 32px;">
+      <span class="callout-tag">— 21 天后 · 三种结果三种走法 —</span>
+      <h4>不允许"再坚持一下"的自我感动</h4>
+      <p>
+        <strong style="color: var(--amber);">🟢 绿灯（约到 ≥ 2 个会议）：</strong>立刻进入 Phase 2，扩到 200 客户、加预热池、补上 3 轮跟进、Strategy Agent 上线。这件事被验证了。<br><br>
+        <strong style="color: var(--amber);">🟡 黄灯（约到 1 个 / 高回复但无会议）：</strong>不加新功能、不扩规模 — 暂停一周，深挖 Writer Prompt + Closer 临门一脚话术，再跑 14 天。<br><br>
+        <strong style="color: var(--amber);">🔴 红灯（0 回复或全部进垃圾箱）：</strong>立刻全员复盘 — 是 ICP 选错了？是开发信看着像 AI？是域名废了？<strong style="color: white;">先解决根本问题，不要"再坚持发 50 封"。</strong>
+      </p>
+    </div>
+
+    <div class="callout" style="background: var(--amber-soft); color: var(--ink); border: 1px solid var(--amber); margin-top: 24px;">
+      <span class="callout-tag" style="color: var(--amber);">— 时间紧迫的纪律 —</span>
+      <h4 style="color: var(--ink);">21 天最容易翻车的 3 件事，提前盯死</h4>
+      <p style="color: var(--ink-2);">
+        <strong>① 别花太多时间在 GBRAIN 自定义</strong> — 用 Garry 的默认 schema 跑起来再调，不要 Day 1-3 全花在写 schema 上。<br>
+        <strong>② 别等"完美的 Prompt"才发信</strong> — Writer 第一版 60 分就发，靠真实回复反馈迭代，比闭门优化快 10 倍。<br>
+        <strong>③ 别同时跑多个 ICP</strong> — 50 封信全打"巴基斯坦商业储能 EPC"一个细分。21 天没空做泛泛而谈的实验。
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 11 技术栈 ======================== -->
+<section id="s11">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">11 — Tech Stack</div>
+      <h2>技术栈<br />前沿配前沿，但不为前沿而前沿</h2>
+      <p class="lead">
+        每一个选型背后都有一个理由。能用现成 API 不自建，能用托管服务不运维，能用最强 LLM 写信就不省。
+      </p>
+    </div>
+
+    <div class="stack-grid">
+      <div class="stack-cell">
+        <div class="layer">— AGENT 编排</div>
+        <div class="pick">Claude Agent SDK / LangGraph</div>
+        <div class="why">多 Agent 协同最关键的一层。Claude Agent SDK 原生支持多 Agent，LangGraph 灵活度高。先用 Claude Agent SDK，复杂工作流再补 LangGraph。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— LLM 路由</div>
+        <div class="pick">Opus 4.7 + Sonnet 4.6 + Haiku</div>
+        <div class="why">Writer / Closer 用 Opus（开发信和谈判是命脉，省不得）；Profiler / Strategy 用 Sonnet；批量打分 / 简单分类用 Haiku。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 浏览器自动化</div>
+        <div class="pick">Playwright + 反检测</div>
+        <div class="why">LinkedIn / Facebook 动作必须模拟真实浏览器。Playwright + stealth 插件 + 代理池，避开自动化检测。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 数据源</div>
+        <div class="pick">Apollo + Crunchbase + Clay</div>
+        <div class="why">不自建 LinkedIn 爬虫（合规风险高）。Apollo 拿决策人，Crunchbase 拿融资动态，Clay 做 enrichment。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 邮件发送</div>
+        <div class="pick">Mailgun + 自建预热池</div>
+        <div class="why">Mailgun 性价比 + Webhook 完善。预热池自建（不依赖第三方 warm-up 服务），可控性更高。SPF/DKIM/DMARC 必配。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 邮箱验证</div>
+        <div class="pick">ZeroBounce</div>
+        <div class="why">不自造轮子。ZeroBounce $0.008/封，比自建便宜+准。失效邮箱直接丢，避免 bounce 拉低投递信誉。</div>
+      </div>
+      <div class="stack-cell" style="background: var(--amber-soft);">
+        <div class="layer" style="color: var(--amber);">★ — 知识中枢（核心选型）</div>
+        <div class="pick">GBRAIN（MIT 开源）</div>
+        <div class="why">Garry Tan（YC 主席）开源的生产级 LLM-WIKI 实现。直接覆盖"向量库 + 关系图谱 + 知识库"三件事。Karpathy 的 LLM-WIKI 是设计模式，GBRAIN 是参考实现。R@5 97.9%，比纯向量 RAG 高 31 点。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— Brain 底层数据库</div>
+        <div class="pick">PGLite + pgvector（GBRAIN 内置）</div>
+        <div class="why">PGLite 是 WASM 内嵌 Postgres，2 秒就绪，无 Docker 无连接串。MVP 阶段够用，10 万级客户后再迁正式 Postgres（GBRAIN 文档有迁移路径）。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 知识图谱</div>
+        <div class="pick">GBRAIN 自动抽取（无需 Neo4j）</div>
+        <div class="why">每次写页面自动抽实体 + 类型边（works_at / advises / supplied_by），零 LLM 调用。比 Neo4j 轻 100 倍。Phase 3 真正大规模再考虑切 Neo4j。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 后端</div>
+        <div class="pick">Python (FastAPI) + Node (Next.js API)</div>
+        <div class="why">AI / Agent 用 Python（生态最强）；Web API 和实时数据用 Node。两套之间用 REST + Webhook 通信。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 前端</div>
+        <div class="pick">Next.js + Tailwind + shadcn/ui</div>
+        <div class="why">沿用 linqi-landing 经验。仪表盘用 React + WebSocket 推送实时数据。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 基础设施</div>
+        <div class="pick">Vercel + Railway + Cloudflare</div>
+        <div class="why">前端 Vercel；后端 Python / 爬虫 Railway 或 Fly.io；Cloudflare 做 CDN + 代理池。早期不上 K8s。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 数据库 / 文件</div>
+        <div class="pick">Supabase + S3 兼容存储</div>
+        <div class="why">Supabase 给 Auth + Postgres + Realtime 三件套，省心。文件用 R2（Cloudflare）替代 S3，免出口流量费。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 监控 / 日志</div>
+        <div class="pick">Sentry + Logfire / Helicone</div>
+        <div class="why">Sentry 抓异常；Helicone 监控 LLM 调用成本和延迟，不让 token 烧失控。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— CI/CD</div>
+        <div class="pick">GitHub Actions + Vercel/Railway 自动部署</div>
+        <div class="why">push 到 main 自动跑测试 + 部署。preview branch 给团队 review。</div>
+      </div>
+      <div class="stack-cell">
+        <div class="layer">— 协作 / 文档</div>
+        <div class="pick">Linear + Notion + GitHub</div>
+        <div class="why">Linear 排任务（轻量）、Notion 写文档、GitHub 写代码。三个工具足够，不上 Jira。</div>
+      </div>
+    </div>
+
+    <div class="callout">
+      <span class="callout-tag">— 选型铁律 —</span>
+      <h4>三件事坚决不自造</h4>
+      <p>
+        <strong>① 邮箱验证 — 用 ZeroBounce</strong>（$0.008/封，自造性价比极低）<br>
+        <strong>② 邮件发送基础设施 — 用 Mailgun</strong>（投递信誉是几年沉淀的，不是钱能买到的）<br>
+        <strong>③ LinkedIn 数据 — 用 Apollo API</strong>（自爬合规风险高，封号成本高于订阅费）
+      </p>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 12 商业模式 ======================== -->
+<section id="s12" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">12 — Business Model</div>
+      <h2>商业模式<br />自用 → 内测 → 产品化的三段式</h2>
+      <p class="lead">
+        因为是自己投的项目，节奏可以慢。先把"产品 + 数据 + 案例"跑实，再考虑卖给谁、怎么卖。
+      </p>
+    </div>
+
+    <h3>三段式商业路径</h3>
+
+    <div class="roadmap">
+      <div class="rm-col now">
+        <div class="rm-quarter">— STAGE 1 · MONTH 0-3</div>
+        <div class="rm-title">自用先行</div>
+        <ul class="rm-list">
+          <li>用我们自己的储能业务跑闭环</li>
+          <li>不对外开放</li>
+          <li>目标：跑出 1 笔真实成交</li>
+          <li>核心交付：可工作的 MVP + 真实数据</li>
+        </ul>
+      </div>
+      <div class="rm-col">
+        <div class="rm-quarter">— STAGE 2 · MONTH 4-6</div>
+        <div class="rm-title">紧密内测</div>
+        <ul class="rm-list">
+          <li>邀请 5-10 家储能 / 光伏外贸团队免费用</li>
+          <li>换数据 + 案例 + 反馈</li>
+          <li>目标：3 家客户跑出可量化 ROI</li>
+          <li>核心交付：客户案例 + Prompt 库</li>
+        </ul>
+      </div>
+      <div class="rm-col">
+        <div class="rm-quarter">— STAGE 3 · MONTH 7-9</div>
+        <div class="rm-title">付费试点</div>
+        <ul class="rm-list">
+          <li>对内测客户切付费（按结果 / 混合定价）</li>
+          <li>开始收第一批真实付费用户</li>
+          <li>目标：MRR ≥ 10 万 / 月</li>
+          <li>核心交付：商业模式验证</li>
+        </ul>
+      </div>
+      <div class="rm-col">
+        <div class="rm-quarter">— STAGE 4 · MONTH 10-12</div>
+        <div class="rm-title">公开发布</div>
+        <ul class="rm-list">
+          <li>官网 + 自助注册 + 销售漏斗</li>
+          <li>横向扩展到光伏 / 新能源相邻品类</li>
+          <li>目标：MRR ≥ 50 万 / 月</li>
+          <li>核心交付：产品化的增长引擎</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>定价模型对比</h3>
+
+    <div class="pricing-grid">
+      <div class="price-card">
+        <div class="name">SaaS 月费</div>
+        <div class="price">$299-999/月</div>
+        <div class="desc">早期吸量好讲，但客户会比"功能" → 容易退化成工具。<br><strong>不推荐。</strong></div>
+      </div>
+      <div class="price-card">
+        <div class="name">Per-Meeting</div>
+        <div class="price">$50-200/见面</div>
+        <div class="desc">客户痛感低，能讲故事，但需要打通 CRM 验证"真见面"。<br><strong>过渡阶段可以用。</strong></div>
+      </div>
+      <div class="price-card">
+        <div class="name">Per-Deal Commission</div>
+        <div class="price">成交额 3-8%</div>
+        <div class="desc">终极形态，最对齐利益，但信任周期长，需要打通成交追踪。<br><strong>远期目标。</strong></div>
+      </div>
+      <div class="price-card featured">
+        <div class="name">Hybrid（混合）</div>
+        <div class="price">底费 + 见面 + 成交</div>
+        <div class="desc">$199/月底费 + $50/真实见面 + 1-3% 成交奖金。<br>对齐双方利益，落地最快。</div>
+      </div>
+    </div>
+
+    <h3>账面思考（自用阶段，假设的内部成本）</h3>
+    <p class="body">
+      跑完整 1000 个客户的全闭环，预估直接成本：
+    </p>
+    <ul>
+      <li><strong>LLM 调用：</strong>Opus 写 1000 封信 + Sonnet 1000 份画像 + Haiku 5000 次打分 ≈ <code>$300-500</code></li>
+      <li><strong>Apollo 订阅：</strong>Pro 套餐 ≈ <code>$99/月</code></li>
+      <li><strong>邮箱验证（ZeroBounce）：</strong>1000 封 ≈ <code>$8</code></li>
+      <li><strong>Mailgun 发送：</strong>5000 封（含跟进）≈ <code>$15</code></li>
+      <li><strong>Vercel + Railway + Supabase 基础设施：</strong>≈ <code>$80-150/月</code></li>
+      <li><strong>合计：</strong>1000 客户全闭环 <strong>≈ $500-800</strong>，单客户边际成本 $0.5-0.8。</li>
+    </ul>
+    <p class="body" style="margin-top: 16px;">
+      <strong>对比苏杭模式：</strong>同样 1000 个客户，靠人力做下来需要 5-10 人 × 一个月，成本至少 $5000+。
+      AI 路径的<strong>边际成本是其 1/10</strong>，规模化后差距更大。
+    </p>
+  </div>
+</section>
+
+<!-- ======================== 13 路线图 ======================== -->
+<section id="s13">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">13 — 12 Month Roadmap</div>
+      <h2>12 个月路线图<br />从 MVP 到品类引领者</h2>
+      <p class="lead">
+        每 3 个月一个明确的"形态升级"。每一阶段都有"可对外讲的成果"和"内部下一步钩子"。
+      </p>
+    </div>
+
+    <div class="roadmap">
+      <div class="rm-col now">
+        <div class="rm-quarter">— Q1 · 月 1-3</div>
+        <div class="rm-title">MVP 闭环</div>
+        <ul class="rm-list">
+          <li>5 个 Agent 简版上线（Strategy 后置）</li>
+          <li>储能赛道自用</li>
+          <li>第一笔真实成交</li>
+          <li>北极星：回复率 ≥ 5%</li>
+        </ul>
+      </div>
+      <div class="rm-col">
+        <div class="rm-quarter">— Q2 · 月 4-6</div>
+        <div class="rm-title">差异化注入</div>
+        <ul class="rm-list">
+          <li>买入信号雷达上线</li>
+          <li>多模态画像（视觉）</li>
+          <li>Strategy Agent 接入</li>
+          <li>5-10 家紧密内测客户</li>
+        </ul>
+      </div>
+      <div class="rm-col">
+        <div class="rm-quarter">— Q3 · 月 7-9</div>
+        <div class="rm-title">商业化验证</div>
+        <ul class="rm-list">
+          <li>付费切换 + Hybrid 定价</li>
+          <li>数字孪生模拟器上线</li>
+          <li>WhatsApp / Facebook Ads 渠道</li>
+          <li>MRR 10 万目标</li>
+        </ul>
+      </div>
+      <div class="rm-col">
+        <div class="rm-quarter">— Q4 · 月 10-12</div>
+        <div class="rm-title">规模化 + 横向扩展</div>
+        <ul class="rm-list">
+          <li>公开官网 + 自助注册</li>
+          <li>横向到光伏 + 新能源汽车</li>
+          <li>多语言（西/阿/法）</li>
+          <li>MRR 50 万目标</li>
+        </ul>
+      </div>
+    </div>
+
+    <h3>关键里程碑（用于全员对齐）</h3>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-num">— M1</div>
+        <h4>第一封 AI 写的信发出</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">通常在 Week 5-6。这天起，团队真正进入"用 AI 工作"模式。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">— M2</div>
+        <h4>第一个真实客户回复</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">Week 8-9 应该出现。出现得早就接着加大量；出现晚就先回头调 Writer。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">— M3</div>
+        <h4>第一次 AI-only 闭环约到会议</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">Week 11-12。不需人工干预的自动化全链路成功一次，等于产品形态被验证。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">— M4</div>
+        <h4>第一笔真实成交</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">Q1-Q2 之间。这是讲故事的素材，也是商业化定价的起点。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">— M5</div>
+        <h4>第一个付费外部客户</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">Q3。从"自用 + 朋友帮忙"切到"陌生人愿意付费"，验证 PMF 第一信号。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">— M6</div>
+        <h4>MRR 第一次破 10 万</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">Q4。商业模式从"假设"变成"事实"。开始正经招人 + 投放。</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 14 团队 ======================== -->
+<section id="s14" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">14 — Roles & Responsibilities</div>
+      <h2>团队分工<br />谁负责什么 · 怎么交接</h2>
+      <p class="lead">
+        早期不需要十几个人。MVP 阶段最理想 3-5 个人核心组合，每个人一专多能。下面列出的是<strong>角色</strong>，不是工位 — 一个人可以兼多个。
+      </p>
+    </div>
+
+    <div class="roles">
+      <div class="role-row">
+        <div class="role-name">Product Lead<small>产品负责人</small></div>
+        <div class="role-resp">
+          定义产品形态、ICP、使用流程、北极星指标。每周和团队对齐进度，每月做一次复盘。所有"做不做某个功能"的最终决策。
+          <strong>需要懂外贸 + 懂 AI 产品</strong>，是项目的灵魂。
+        </div>
+        <div class="role-deliver">
+          交付：产品 PRD · 周复盘文档 · ICP 定义 · 决策记录
+        </div>
+      </div>
+
+      <div class="role-row">
+        <div class="role-name">AI / Agent Engineer<small>Agent 工程师</small></div>
+        <div class="role-resp">
+          搭建 6 个 Agent 的核心逻辑、Prompt 工程、LLM 路由、工具调用框架。
+          特别是 Writer 和 Closer 两个核心 Agent，决定产品的"灵魂"。需要持续追踪 Claude / GPT 等模型迭代。
+        </div>
+        <div class="role-deliver">
+          交付：Agent 实现 · Prompt 库 · 自动 A/B 实验 · LLM 成本控制
+        </div>
+      </div>
+
+      <div class="role-row">
+        <div class="role-name">Backend / Data Engineer<small>后端 + 数据工程师</small></div>
+        <div class="role-resp">
+          数据管道、API 集成（Apollo / Mailgun / LinkedIn / WhatsApp）、Postgres + pgvector、爬虫基础设施、邮件预热池、监控。
+          这是项目的"地基"，跑得稳不稳全靠这层。
+        </div>
+        <div class="role-deliver">
+          交付：API 层 · 数据库 · 爬虫服务 · 监控仪表盘 · 投递信誉守护
+        </div>
+      </div>
+
+      <div class="role-row">
+        <div class="role-name">Frontend / UI<small>前端 / 仪表盘</small></div>
+        <div class="role-resp">
+          实时仪表盘、客户档案查看页、回复审核界面、跟进队列、移动端简版。
+          UI 风格<strong>克制专业</strong> — 这是给业务员每天打开的工具，不是给 VC 看的酷炫官网。
+        </div>
+        <div class="role-deliver">
+          交付：仪表盘 · 审核 UI · 移动端 · 设计系统
+        </div>
+      </div>
+
+      <div class="role-row">
+        <div class="role-name">Sales / Domain Expert<small>外贸一线 + 产品测试</small></div>
+        <div class="role-resp">
+          用 MVP 在自己业务上跑数据，提供"这封信像不像真人写的"反馈、"这个客户档案准不准"反馈。
+          每周交付一份"用户视角周记"。<strong>这个角色不能省</strong> — 没他，AI 写出来的信都飘在天上。
+        </div>
+        <div class="role-deliver">
+          交付：使用周记 · 真实数据 · 改进建议 · 销售剧本草稿
+        </div>
+      </div>
+    </div>
+
+    <h3>协作机制</h3>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-num">— 周会</div>
+        <h4>每周一 30 分钟 · 周复盘</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">上周数据 → 关键决策 → 本周目标 → 阻塞点。<strong>不超过 30 分钟</strong>，不开成例会。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 日报</div>
+        <h4>每天结束 5 分钟 · 异步</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">Slack / 飞书发一条："今天做了什么 · 卡在哪里 · 明天打算什么"。不强求质量，强求频率。</p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 月会</div>
+        <h4>每月最后一周 · 战略复盘</h4>
+        <p style="font-size: 13.5px; color: var(--muted);">看北极星指标、决定要不要变方向、要不要砍模块、要不要招新人。<strong>有事说事，没事不强行开。</strong></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 15 度量 ======================== -->
+<section id="s15">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">15 — Measurement</div>
+      <h2>度量、复盘<br />与决策机制</h2>
+      <p class="lead">
+        没有数据不开会。所有决策必须基于数据，没数据就先去拿数据。下面是我们要持续盯着的指标和复盘流程。
+      </p>
+    </div>
+
+    <h3>北极星指标 + 关键护栏指标</h3>
+    <table class="vs-table">
+      <thead>
+        <tr>
+          <th>指标</th>
+          <th style="color: var(--ink) !important;">目标值</th>
+          <th style="color: var(--ink) !important;">采集方式 · 频率</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td class="col-key">★ 北极星 · 每周约到会议数</td>
+          <td class="col-them" style="color: var(--ink);">MVP 阶段 ≥ 3 个/周；Q2 ≥ 10 个/周</td>
+          <td class="col-us">Calendly + 仪表盘 · 实时</td>
+        </tr>
+        <tr>
+          <td class="col-key">开发信回复率</td>
+          <td class="col-them" style="color: var(--ink);">MVP ≥ 5%；Q2 ≥ 8%</td>
+          <td class="col-us">邮件追踪 + 回复识别 · 实时</td>
+        </tr>
+        <tr>
+          <td class="col-key">投递率（进收件箱）</td>
+          <td class="col-them" style="color: var(--ink);">≥ 85%（用 GlockApps 检测）</td>
+          <td class="col-us">第三方监测 · 每周</td>
+        </tr>
+        <tr>
+          <td class="col-key">单客户全闭环成本</td>
+          <td class="col-them" style="color: var(--ink);">≤ $1（含 LLM + 数据 + 邮件）</td>
+          <td class="col-us">Helicone + Mailgun 账单 · 每周</td>
+        </tr>
+        <tr>
+          <td class="col-key">客户档案准确度</td>
+          <td class="col-them" style="color: var(--ink);">≥ 80%（业务员盲评）</td>
+          <td class="col-us">每月抽 20 份盲评 · 月度</td>
+        </tr>
+        <tr>
+          <td class="col-key">"AI 痕迹" 识别率</td>
+          <td class="col-them" style="color: var(--ink);">≤ 20%（业务员盲选 AI 信 vs 人工信）</td>
+          <td class="col-us">每月一次 A/B 盲测 · 月度</td>
+        </tr>
+        <tr>
+          <td class="col-key">域名信誉分（Sender Score）</td>
+          <td class="col-them" style="color: var(--ink);">≥ 90 / 100</td>
+          <td class="col-us">SenderScore.org · 每周</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3>复盘节奏 · 三层金字塔</h3>
+    <div class="grid-3">
+      <div class="card">
+        <div class="card-num">— 战术层（每周）</div>
+        <h4>Tactical Review</h4>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.65;">
+          看本周指标曲线、卡点、下周目标。<strong>30 分钟。</strong>不允许讨论"要不要重做某个模块"这种战略议题。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 战役层（每月）</div>
+        <h4>Strategic Review</h4>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.65;">
+          看本月北极星达没达、ICP 是不是要调、要不要砍模块。<strong>2 小时</strong>。决议必须落到下月计划。
+        </p>
+      </div>
+      <div class="card">
+        <div class="card-num">— 战略层（每季）</div>
+        <h4>Direction Review</h4>
+        <p style="font-size: 13.5px; color: var(--muted); line-height: 1.65;">
+          看产品定位、商业模式、是不是要切赛道、要不要融资。<strong>半天 + 写文档</strong>。重大方向变更走这里。
+        </p>
+      </div>
+    </div>
+
+    <h3>决策记录（ADR · Architecture Decision Records）</h3>
+    <p class="body">
+      所有"为什么我们这样选"的决策都要写下来。半年后回头看，知道当初是为什么 — 也才知道当初的假设是不是过期了，要不要推翻重来。
+    </p>
+    <div class="card">
+      <h4>每条决策记录的格式</h4>
+      <ol style="font-size: 14px;">
+        <li><strong>Context</strong> — 在什么背景下做这个决策</li>
+        <li><strong>Options</strong> — 当时考虑过哪些选项</li>
+        <li><strong>Decision</strong> — 最终选了哪个</li>
+        <li><strong>Why</strong> — 选这个的核心理由（不超过 3 条）</li>
+        <li><strong>Trade-offs</strong> — 我们放弃了什么</li>
+        <li><strong>Trigger to revisit</strong> — 什么情况下要回来重新审视</li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== 16 FAQ ======================== -->
+<section id="s16" style="background: var(--paper);">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">16 — FAQ</div>
+      <h2>预想问题<br />和我们的真实回答</h2>
+      <p class="lead">
+        团队、朋友、第一批客户最可能问的问题。先在内部对齐答案，遇到时不慌。
+      </p>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">这和 11x.ai / Clay / Smartlead 有啥区别？</div>
+      <div class="faq-a">
+        三件事：① 我们<strong>垂直深耕储能 / 光伏外贸</strong>，他们是通用型，对中国供应商→海外采购方的语境理解空白；
+        ② 我们做<strong>多 Agent 协同闭环</strong>，他们是单点工具拼合；
+        ③ 我们做<strong>数字孪生客户模拟器</strong>等差异化模块，他们没做。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">AI 写的信不会被识别成 AI 进垃圾箱吗？</div>
+      <div class="faq-a">
+        会，如果直接用 ChatGPT 默认输出。我们的 Writer Agent 内置"刻意降级"规则 —
+        加入业务员个人风格、口语化片段、合理拼写习惯，并通过 A/B 持续优化。
+        北极星护栏指标里就有"AI 痕迹识别率 ≤ 20%"的盲测，达不到就不上量。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">域名 / 邮箱被封怎么办？</div>
+      <div class="faq-a">
+        预热池策略 + 多域名轮换 + Sender Score 持续监控。
+        即使其中一个域名废了，也有备用域名顶上。<strong>这是我们 Week 7-8 的核心攻关，做不通后面全部白搭。</strong>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">不做投资人融资，钱够用吗？</div>
+      <div class="faq-a">
+        MVP 阶段烧的主要是 LLM token + 几个 SaaS 订阅（Apollo + Mailgun + 基础设施），
+        预估 3 个月直接成本 &lt; $5K，比雇一个全职销售还便宜。
+        Phase 2 内测客户开始反哺现金流后，自循环就能起来。
+        <strong>我们用储能业务的现金流养这个项目，不开外部投资人的天窗。</strong>
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">为什么选储能 / 光伏，不选更大的赛道？</div>
+      <div class="faq-a">
+        三个原因：① 我们<strong>自己在做</strong>，有真实业务跑 dogfood，这是最强护城河；
+        ② 储能 / 光伏全球需求在涨，TAM 不算小；
+        ③ 行业够垂直，能积累出"通用 AI BDR 工具"做不到的深度（产品认证、HS 编码、各国补贴政策）。
+        跑通后再横向扩到光伏、新能源车、储能逆变器等相邻品类。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">客户为什么会信任 AI 替他成交？</div>
+      <div class="faq-a">
+        早期不信任。所以 MVP 阶段所有触达都是"AI 起草 → 人工审核 → 一键发送"，<strong>人始终在回路里</strong>。
+        客户看到效果（约到会议、回复率提升）后，逐步放权给 AI 自动跑。
+        这是一个"信任曲线"，不是一次性买断。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">21 天冲刺跑不出来怎么办？</div>
+      <div class="faq-a">
+        见第 10 节"红黄绿三种结果"。<strong>红灯就立刻全员复盘半天</strong>，重新审视 ICP / 行业选择 / Prompt 工程，
+        甚至切换垂直行业。不带感情，看数据说话。<strong>不允许"再坚持发 50 封"的自我感动。</strong>
+        21 天的好处是<strong>亏损可控</strong> — 即使全输了，3 周时间和几千块成本，团队学到的 Agent 编排 + GBRAIN 上手能力比这值钱。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">合规风险 — 爬 LinkedIn / 群发邮件会不会有法律问题？</div>
+      <div class="faq-a">
+        ① LinkedIn 数据用 Apollo / Crunchbase 等合规第三方 API，<strong>不直接爬</strong>；
+        ② 邮件发送遵守 CAN-SPAM Act / GDPR，每封信都有 unsubscribe 链接，发件方信息真实可验；
+        ③ 不收集 / 储存欧盟个人敏感数据，目标客户主要是<strong>企业邮箱（B2B）</strong>，不是个人邮箱。
+        Phase 2 会专门做一次合规审查。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">AI 模型在涨价 / 在变 — 我们的成本和能力会不会失控？</div>
+      <div class="faq-a">
+        Helicone 实时监控每个 Agent 的 token 消耗和成本。
+        Writer / Closer 用 Opus（贵但写信质量重要），其他用 Sonnet / Haiku 路由。
+        模型迭代是<strong>对我们有利</strong> — 同样能力的 LLM 每年成本下降 50%-70%，
+        2026 年的 Sonnet 比 2024 年的 GPT-4 还便宜还强。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">为什么要用 GBRAIN，不自己拼 Postgres + Neo4j？</div>
+      <div class="faq-a">
+        三个原因：① <strong>GBRAIN 是 LLM-WIKI 模式的生产级实现</strong>，由 Garry Tan（YC 主席）2026 年 4 月 9 日 MIT 开源，自己生产环境跑着 17,888 页 / 4,383 人 / 723 公司，评测 R@5 达 97.9%；
+        ② <strong>覆盖我们 90% 的需求</strong>：客户档案 + 决策人画像 + Deal 追踪 + 知识图谱 + 21 个 cron job 自动维护，全部开箱即用；
+        ③ <strong>自己拼至少省 4-6 周</strong>，且 GBRAIN 的"Brain vs Memory"纪律、MECE 归档、Two-Layer Pages（合成事实 + append-only 时间线）这些设计是 Garry 用 1.7 万页生产数据打磨过的，我们短期内不可能想到。
+        风险点是它给"个人 brain"设计，多租户场景要 fork 加层 —— 这是 Phase 3 的事情，MVP 不影响。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">客户的数据隐私 / 安全怎么保证？</div>
+      <div class="faq-a">
+        GBRAIN 默认 <strong>local-first</strong> 架构 —— Brain Repo 是本地 git 仓库，PGLite 是嵌入式数据库（无需服务器、无需 Docker、无网络调用），<strong>原始数据不出本地</strong>。
+        敏感信息（API key / token / 邮箱地址）在 ingest 时<strong>自动 redact</strong>。
+        Phase 2 做产品化时，每个客户公司一份独立 Brain Repo（不混用），从架构上隔离数据。
+      </div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-q">这件事最坏的失败结局是什么？</div>
+      <div class="faq-a">
+        最坏：跑了 6 个月发现 AI 开发信回复率到不了 5%，业务员觉得不如手动 — 那么我们至少
+        ① 自己的储能业务用上了部分 AI 工具，效率提升一截；
+        ② 团队学到了 Agent 编排 + LLM 工程的真本事；
+        ③ 沉淀的 Prompt 库和数据可以转作其他用途。
+        <strong>不是 0 收益的失败，是"昂贵但有用的学习"。</strong>这是自己投钱做项目最大的好处 — 输得起。
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======================== Footer ======================== -->
+<footer>
+  <div class="wrap">
+    <p>AI 外贸增长引擎 · 内部作战图 · v1.0</p>
+    <p class="meta">DOC · CONFIDENTIAL · 2026.04 · 仅供核心团队</p>
+    <p style="margin-top: 16px; font-size: 12px;">
+      本文档基于 idea/ 目录三份资料综合：<br>
+      ① 外贸 AI SaaS 工具开发需求与流程 PPT &nbsp; · &nbsp;
+      ② 外贸开发流程 docx &nbsp; · &nbsp;
+      ③ 苏杭 Solar PPT（同行案例参考）
+    </p>
+  </div>
+</footer>
+
+<script src="js/main.js" defer></script>
+</body>
+</html>
