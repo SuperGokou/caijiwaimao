@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>AI 外贸增长引擎 · 业务流程演示</title>
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&family=Noto+Serif+SC:wght@400;600;900&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="style/demo.css" />
+</head>
+<body>
+
+<!-- ============ HEADER ============ -->
+<header class="demo-header">
+  <div class="brand">
+    <div class="brand-logo">外</div>
+    <div class="brand-text">
+      AI 外贸增长引擎
+      <small>Live Demo · 业务流程演示</small>
+    </div>
+  </div>
+  <a class="back-link" href="index.html">← 返回作战图</a>
+</header>
+
+<!-- ============ MAIN STAGE ============ -->
+<main class="stage">
+
+  <!-- LEFT EXPLAINER -->
+  <div class="explainer">
+    <div class="explainer-step" id="exp-step">第 1 步 / 9</div>
+    <h1 class="explainer-title" id="exp-title">首次配置<br><em>产品大脑就绪</em></h1>
+    <p class="explainer-text" id="exp-text">业务员第一次使用时，把产品资料、客户案例、差异化、公司资料一次性告诉系统。这是 AI 写每一封信的"事实源"。</p>
+    <div class="explainer-tag" id="exp-tag">⏱ 一次性 · 10-15 分钟</div>
+  </div>
+
+  <!-- CENTER: PHONE -->
+  <div class="phone">
+    <div class="phone-screen">
+
+      <!-- Status bar (light/dark switches per screen) -->
+      <div class="status-bar" id="status-bar">
+        <div class="status-time">9:41</div>
+        <div class="status-icons">
+          <span>•••</span>
+          <svg viewBox="0 0 16 11"><path d="M14 0a2 2 0 012 2v7a2 2 0 01-2 2H2a2 2 0 01-2-2V2a2 2 0 012-2h12zM2 2v7h12V2H2z"/></svg>
+        </div>
+      </div>
+
+      <!-- App content area -->
+      <div class="app">
+
+        <!-- ============ SCREEN 0 · SPLASH ============ -->
+        <div class="screen screen-splash active" data-screen="0">
+          <div class="splash-logo">外</div>
+          <div class="splash-name">外贸引擎</div>
+          <div class="splash-tagline">AI · GROWTH · ENGINE</div>
+          <div class="splash-loading">
+            <div class="splash-loading-bar"></div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 1 · SETUP ============ -->
+        <div class="screen" data-screen="1">
+          <div class="app-header">
+            <div class="app-header-back">‹</div>
+            <div class="app-header-title">首次配置</div>
+            <div class="app-header-action">跳过</div>
+          </div>
+          <div class="app-body">
+            <div class="setup-list" id="setup-list">
+              <div class="setup-item" data-setup="0">
+                <div class="setup-item-icon">📦</div>
+                <div class="setup-item-text">
+                  <h4>产品资料</h4>
+                  <p>规格 / 价格 / MOQ / 交期 / 认证</p>
+                </div>
+                <div class="setup-item-status"></div>
+              </div>
+              <div class="setup-item" data-setup="1">
+                <div class="setup-item-icon">🏆</div>
+                <div class="setup-item-text">
+                  <h4>客户案例</h4>
+                  <p>已成交的代表性客户、规模、效果</p>
+                </div>
+                <div class="setup-item-status"></div>
+              </div>
+              <div class="setup-item" data-setup="2">
+                <div class="setup-item-icon">⚡</div>
+                <div class="setup-item-text">
+                  <h4>差异化卖点</h4>
+                  <p>和竞品比的优势：交期 / 售后 / 价格</p>
+                </div>
+                <div class="setup-item-status"></div>
+              </div>
+              <div class="setup-item" data-setup="3">
+                <div class="setup-item-icon">🏢</div>
+                <div class="setup-item-text">
+                  <h4>公司基本盘</h4>
+                  <p>官网 / 简介 / 规模 / 团队</p>
+                </div>
+                <div class="setup-item-status"></div>
+              </div>
+            </div>
+            <div class="setup-summary" id="setup-summary">
+              <p>✓ 产品大脑就绪</p>
+              <small>之后所有 campaign 都共享这份知识</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 2 · NEW CAMPAIGN (ICP) ============ -->
+        <div class="screen" data-screen="2">
+          <div class="app-header">
+            <div class="app-header-back">‹</div>
+            <div class="app-header-title">新 Campaign</div>
+            <div class="app-header-action"></div>
+          </div>
+          <div class="app-body">
+            <div class="campaign-form">
+              <div class="field-label">— 这次要打谁？</div>
+              <div class="field-input">
+                <span class="field-typing" id="icp-typed"></span><span class="field-cursor" id="icp-cursor"></span>
+              </div>
+
+              <div class="field-label" style="margin-top:24px;">— 推荐切入卖点</div>
+              <div class="field-chip-row" id="chip-row">
+                <span class="field-chip" data-chip="0">交期短 30 天</span>
+                <span class="field-chip" data-chip="1">本地售后</span>
+                <span class="field-chip" data-chip="2">5 年质保</span>
+                <span class="field-chip" data-chip="3">LFP 安全方案</span>
+                <span class="field-chip" data-chip="4">中国直发</span>
+              </div>
+
+              <button class="cta-button" id="campaign-cta">开始 →</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 3 · HUNTER SCANNING ============ -->
+        <div class="screen" data-screen="3">
+          <div class="app-header">
+            <div class="app-header-back">‹</div>
+            <div class="app-header-title">AI Hunter 工作中</div>
+            <div class="app-header-action"></div>
+          </div>
+          <div class="app-body">
+            <div class="scanning">
+              <div class="radar-mini">
+                <div class="radar-mini-sweep"></div>
+                <div class="radar-mini-center"></div>
+              </div>
+              <div class="scan-counter" id="scan-counter">0</div>
+              <div class="scan-label">家匹配公司 / 已扫描中</div>
+
+              <div class="scan-sources">
+                <div class="scan-source" data-source="0">
+                  <div class="scan-source-dot"></div>
+                  <span>Apollo · 全球决策人数据库</span>
+                  <span class="scan-source-status">扫描中</span>
+                </div>
+                <div class="scan-source" data-source="1">
+                  <div class="scan-source-dot"></div>
+                  <span>LinkedIn · 公司 + 招聘动态</span>
+                  <span class="scan-source-status">扫描中</span>
+                </div>
+                <div class="scan-source" data-source="2">
+                  <div class="scan-source-dot"></div>
+                  <span>Crunchbase · 融资 + 增长信号</span>
+                  <span class="scan-source-status">扫描中</span>
+                </div>
+                <div class="scan-source" data-source="3">
+                  <div class="scan-source-dot"></div>
+                  <span>展会 · 行业新闻 + 政策</span>
+                  <span class="scan-source-status">扫描中</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 4 · COMPANIES LIST ============ -->
+        <div class="screen" data-screen="4">
+          <div class="app-header">
+            <div class="app-header-back">‹</div>
+            <div class="app-header-title">高匹配客户</div>
+            <div class="app-header-action">筛选</div>
+          </div>
+          <div class="app-body">
+            <div class="list-summary">
+              <div class="list-summary-num">47</div>
+              <div class="list-summary-text">
+                <strong>47 家公司</strong>匹配 ICP<br>
+                按意向分排序，<strong>9 家有强买入信号</strong>
+              </div>
+            </div>
+
+            <div id="companies-list">
+              <div class="company-card" data-cidx="0">
+                <div class="company-flag">🇵🇰</div>
+                <div>
+                  <div class="company-info-name">Solar Edge Pakistan</div>
+                  <div class="company-info-meta">Karachi · ESS Installer · 80 人</div>
+                  <div class="company-info-signal">上月中标 12MWh 项目</div>
+                </div>
+                <div class="company-score">
+                  <div class="company-score-num">92</div>
+                  <div class="company-score-label">SCORE</div>
+                </div>
+              </div>
+              <div class="company-card" data-cidx="1">
+                <div class="company-flag">🇵🇰</div>
+                <div>
+                  <div class="company-info-name">Karachi ESS Co.</div>
+                  <div class="company-info-meta">Karachi · Distributor · 40 人</div>
+                  <div class="company-info-signal">官网招中国供应商</div>
+                </div>
+                <div class="company-score">
+                  <div class="company-score-num">88</div>
+                  <div class="company-score-label">SCORE</div>
+                </div>
+              </div>
+              <div class="company-card" data-cidx="2">
+                <div class="company-flag">🇵🇰</div>
+                <div>
+                  <div class="company-info-name">Lahore Solar EPC</div>
+                  <div class="company-info-meta">Lahore · EPC · 120 人</div>
+                  <div class="company-info-signal">B 轮融资 $5M</div>
+                </div>
+                <div class="company-score">
+                  <div class="company-score-num">85</div>
+                  <div class="company-score-label">SCORE</div>
+                </div>
+              </div>
+              <div class="company-card" data-cidx="3">
+                <div class="company-flag">🇵🇰</div>
+                <div>
+                  <div class="company-info-name">Punjab Power Group</div>
+                  <div class="company-info-meta">Lahore · Distributor · 60 人</div>
+                  <div class="company-info-signal">扩展商业储能业务</div>
+                </div>
+                <div class="company-score">
+                  <div class="company-score-num">81</div>
+                  <div class="company-score-label">SCORE</div>
+                </div>
+              </div>
+              <div class="company-card" data-cidx="4">
+                <div class="company-flag">🇵🇰</div>
+                <div>
+                  <div class="company-info-name">Islamabad Energy Solutions</div>
+                  <div class="company-info-meta">Islamabad · EPC · 35 人</div>
+                </div>
+                <div class="company-score">
+                  <div class="company-score-num">76</div>
+                  <div class="company-score-label">SCORE</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 5 · COMPANY PROFILE ============ -->
+        <div class="screen" data-screen="5">
+          <div class="profile-hero">
+            <div class="profile-score-badge">SCORE 92</div>
+            <div class="profile-hero-flag">🇵🇰</div>
+            <div class="profile-hero-name">Solar Edge Pakistan</div>
+            <div class="profile-hero-tagline">Commercial ESS Installer · Karachi</div>
+            <div class="profile-hero-row">
+              <div class="profile-hero-stat">
+                <div class="profile-hero-stat-num">80</div>
+                <div class="profile-hero-stat-label">员工</div>
+              </div>
+              <div class="profile-hero-stat">
+                <div class="profile-hero-stat-num">$15M</div>
+                <div class="profile-hero-stat-label">营收</div>
+              </div>
+              <div class="profile-hero-stat">
+                <div class="profile-hero-stat-num">2018</div>
+                <div class="profile-hero-stat-label">成立</div>
+              </div>
+            </div>
+          </div>
+          <div class="app-body" style="padding: 0;">
+            <div class="profile-section" data-psec="0">
+              <h5>— 决策人</h5>
+              <div class="profile-decisionmaker">
+                <div class="profile-dm-avatar">AK</div>
+                <div class="profile-dm-info">
+                  <h6>Ali Khan · CEO</h6>
+                  <p>2018 联创 · 技术背景 · LinkedIn 活跃</p>
+                </div>
+              </div>
+            </div>
+            <div class="profile-section" data-psec="1">
+              <h5>— Buying Signals · 最近 30 天</h5>
+              <div class="signal"><strong>2026-04-15</strong> · 中标 Karachi 12MWh 项目，公开招中国储能集成供应商</div>
+              <div class="signal"><strong>2026-04-10</strong> · CEO LinkedIn 发文谈"中国供应商质量提升"</div>
+              <div class="signal"><strong>2026-04-02</strong> · 招聘 Procurement Lead（采购扩张信号）</div>
+            </div>
+            <div class="profile-section" data-psec="2">
+              <h5>— 痛点 + 我们的切入</h5>
+              <p>
+                当前供应商：BYD（交期 90 天）。<br>
+                <strong>我方机会</strong>：交期短 30 天 + 巴基斯坦本地售后 + LFP 安全方案。
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 6 · EMAIL DRAFT ============ -->
+        <div class="screen email-screen" data-screen="6">
+          <div class="email-tabs">
+            <div class="email-tab active">短版</div>
+            <div class="email-tab">长版</div>
+            <div class="email-tab">痛点切入</div>
+          </div>
+          <div class="email-meta">
+            <div class="email-meta-row"><span>To:</span><span>ali@solaredge.pk</span></div>
+            <div class="email-meta-row"><span>From:</span><span>wei@yourcompany.com</span></div>
+          </div>
+          <div class="email-subject-row" id="email-subject"></div>
+          <div class="email-content" id="email-content"></div>
+          <div class="email-actions">
+            <button class="email-action-btn">弃用</button>
+            <button class="email-action-btn">改写</button>
+            <button class="email-action-btn primary" id="send-btn">✓ 发送</button>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 7 · SEND CONFIRM ============ -->
+        <div class="screen confirm-screen" data-screen="7">
+          <div class="confirm-check">✓</div>
+          <div class="confirm-title">已发送</div>
+          <div class="confirm-sub">→ ali@solaredge.pk</div>
+          <div class="confirm-detail">
+            <div class="confirm-detail-icon">📨</div>
+            <div>
+              <div style="font-weight:700;">投递成功</div>
+              <div style="font-size:11px;color:var(--muted);">SPF / DKIM / DMARC 验证通过</div>
+            </div>
+          </div>
+          <div class="confirm-detail">
+            <div class="confirm-detail-icon">🤖</div>
+            <div>
+              <div style="font-weight:700;">AI 已安排自动跟进</div>
+              <div style="font-size:11px;color:var(--muted);">第 5 天 / 第 10 天 / 切 LinkedIn</div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 8 · TRACKING ============ -->
+        <div class="screen" data-screen="8">
+          <div class="app-header">
+            <div class="app-header-back">‹</div>
+            <div class="app-header-title">跟进时间线</div>
+            <div class="app-header-action"></div>
+          </div>
+          <div class="app-body">
+            <div class="tracking-list">
+              <div class="tracking-item" data-track="0">
+                <div class="tracking-day">D0 · 2026-04-22</div>
+                <div class="tracking-content">
+                  <div class="tracking-title">📧 首封开发信发出</div>
+                  <div class="tracking-desc">投递率 100% · 已被打开 2 次</div>
+                </div>
+              </div>
+              <div class="tracking-item" data-track="1">
+                <div class="tracking-day">D5 · 2026-04-27</div>
+                <div class="tracking-content">
+                  <div class="tracking-title">📧 AI 自动跟进（不同角度）</div>
+                  <div class="tracking-desc">附 Karachi 项目参考方案 PDF</div>
+                </div>
+              </div>
+              <div class="tracking-item" data-track="2">
+                <div class="tracking-day">D10 · 2026-05-02</div>
+                <div class="tracking-content">
+                  <div class="tracking-title">💼 切到 LinkedIn 主动联系</div>
+                  <div class="tracking-desc">发申请加好友 + 一句话私信</div>
+                </div>
+              </div>
+              <div class="tracking-item reply" data-track="3">
+                <div class="tracking-day">D12 · 2026-05-04</div>
+                <div class="tracking-content">
+                  <div class="tracking-title">🔔 客户回复了！</div>
+                  <div class="tracking-desc">Ali Khan 询价 1MW 项目</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 9 · INBOX + AI REPLY ============ -->
+        <div class="screen" data-screen="9">
+          <div class="inbox-notification">
+            <div class="inbox-notification-icon">🔔</div>
+            <div class="inbox-notification-text">
+              <h5>Ali Khan 回复了</h5>
+              <p>05:42 PKT · 巴基斯坦时差</p>
+            </div>
+          </div>
+          <div class="app-body" style="padding: 0;">
+            <div class="reply-mail">
+              <div class="reply-from">
+                <div class="reply-avatar">AK</div>
+                <div class="reply-from-info">
+                  <div class="reply-from-name">Ali Khan</div>
+                  <div class="reply-from-time">05:42 · 凌晨</div>
+                </div>
+              </div>
+              <div class="reply-subject">Re: Solar Edge × 12MWh 中国 LFP 方案</div>
+              <div class="reply-body">"Hi Wei, Interested in your LFP solution. Can you provide a detailed quote for 500 units? Also need to discuss certification requirements for Pakistan grid."</div>
+            </div>
+
+            <div class="ai-analysis">
+              <div class="ai-analysis-label">— AI 意图分析 · 0.8 秒</div>
+              <div class="ai-analysis-text">
+                意图：<strong>询价 + 认证咨询</strong><br>
+                涉及报价（500 单位）→ <strong>转人工接管</strong><br>
+                认证问题 AI 可直答（Pakistan 电网 IEC 61727 标准）
+              </div>
+            </div>
+
+            <div class="ai-draft">
+              <div class="ai-draft-label">— AI 已起草回复（你审批后发送）</div>
+              <div class="ai-draft-text" id="ai-draft-text"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ SCREEN 10 · MEETING BOOKED ============ -->
+        <div class="screen meeting-screen" data-screen="10">
+          <div class="meeting-icon">📅</div>
+          <div class="meeting-title">会议已约定</div>
+          <div class="meeting-sub">从陌生到约见 · 仅用 12 天</div>
+          <div class="meeting-card">
+            <div class="meeting-card-row">
+              <div class="meeting-card-icon">👤</div>
+              <div class="meeting-card-text">
+                <strong>Ali Khan</strong> · Solar Edge Pakistan
+                <small>CEO · Karachi</small>
+              </div>
+            </div>
+            <div class="meeting-card-row">
+              <div class="meeting-card-icon">🕐</div>
+              <div class="meeting-card-text">
+                2026-05-08 · 周四
+                <small>10:00 PKT / 13:00 CST</small>
+              </div>
+            </div>
+            <div class="meeting-card-row">
+              <div class="meeting-card-icon">💬</div>
+              <div class="meeting-card-text">
+                Zoom 会议 · 30 分钟
+                <small>议程：500 单位报价 + 认证讨论</small>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /app -->
+
+      <div class="home-indicator"></div>
+    </div><!-- /phone-screen -->
+  </div><!-- /phone -->
+
+  <!-- RIGHT SIDE INFO -->
+  <div class="side-info">
+    <div class="side-info-card" id="side-card-1">
+      <div class="label">— 此刻 AI 在做</div>
+      <div class="stat" id="side-stat">📦<small>4/4</small></div>
+      <div class="desc" id="side-desc">把产品规格、案例、卖点、公司资料写入 brain/products/，作为之后 AI 写信的"事实源"。</div>
+    </div>
+
+    <div class="side-info-card" id="side-card-2">
+      <div class="label">— 你 vs AI 分工</div>
+      <div class="desc" id="side-split">
+        <strong style="color:white;">你做：</strong>提供产品资料一次（10-15 分钟）<br><br>
+        <strong style="color:var(--amber);">AI 做：</strong>把资料结构化、向量化、永久记忆 — 之后所有 campaign 自动调用
+      </div>
+    </div>
+  </div>
+
+  <!-- START OVERLAY -->
+  <div class="start-overlay" id="start-overlay">
+    <div class="start-eyebrow">— LIVE DEMO · 90 SECONDS</div>
+    <div class="start-title">
+      看 AI 怎么<br /><em>替你成交一个客户</em>
+    </div>
+    <div class="start-sub">
+      90 秒动画演示，模拟一台手机里的"AI 外贸引擎"App，从产品配置到成功约会议的完整流程。
+      所有数据基于真实场景（巴基斯坦商业储能 EPC）。
+    </div>
+    <button class="start-btn" id="start-btn">
+      <span class="play-icon"></span>
+      开始演示
+    </button>
+  </div>
+
+</main>
+
+<!-- ============ CONTROLS ============ -->
+<footer class="demo-controls">
+  <div class="step-indicator">
+    <span id="step-num">1 / 9</span>
+    <div class="step-dots" id="step-dots">
+      <span class="step-dot active"></span>
+      <span class="step-dot"></span>
+      <span class="step-dot"></span>
+      <span class="step-dot"></span>
+      <span class="step-dot"></span>
+      <span class="step-dot"></span>
+      <span class="step-dot"></span>
+      <span class="step-dot"></span>
+      <span class="step-dot"></span>
+    </div>
+  </div>
+  <div class="controls-buttons">
+    <button class="ctrl-btn" id="prev-btn">‹ 上一步</button>
+    <button class="ctrl-btn primary" id="play-pause-btn">⏸ 暂停</button>
+    <button class="ctrl-btn" id="next-btn">下一步 ›</button>
+    <button class="ctrl-btn" id="restart-btn">↻ 重新</button>
+  </div>
+  <div class="progress-wrap">
+    <div class="progress-bar"><div class="progress-bar-fill" id="progress-fill"></div></div>
+    <div class="progress-time" id="progress-time">00:00 / 01:30</div>
+  </div>
+</footer>
+
+<script src="js/demo.js" defer></script>
+
+</body>
+</html>
